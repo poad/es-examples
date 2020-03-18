@@ -1,0 +1,23 @@
+{
+  "name": "next-ts-examples",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@types/node": "^13.9.1",
+    "@types/react": "^16.9.23",
+    "next": "9.3.0",
+    "react": "16.13.0",
+    "react-dom": "16.13.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "@zeit/next-typescript": "^1.1.1",
+    "typescript": "^3.8.3"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "nuxt-vuetify-example",
+  "version": "1.0.0",
+  "description": "Nuxt.js example with Vuetify",
+  "author": "Kenji Saito",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "nuxt": "^2.12.0"
+  },
+  "devDependencies": {
+    "@nuxt/cli": "^2.12.0",
+    "@nuxtjs/eslint-config": "^2.0.2",
+    "@nuxtjs/eslint-module": "^1.1.0",
+    "@nuxtjs/stylelint-module": "^3.2.2",
+    "@nuxtjs/vuetify": "^1.11.0",
+    "@types/minimist": "^1.2.0",
+    "acorn": "^7.1.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-nuxt": "^0.5.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "minimist": "^1.2.5",
+    "prettier": "^1.19.1",
+    "stylelint": "^13.2.1",
+    "svjsl": "^1.0.0",
+    "webpack": "^4.42.0"
+  }
+}
