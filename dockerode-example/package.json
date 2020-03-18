@@ -1,0 +1,20 @@
+{
+  "name": "dockerode-example",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "poad",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "dockerode": "^3.1.0"
+  },
+  "devDependencies": {
+    "electron": "^8.1.1",
+    "minimist": "^1.2.5",
+    "svjsl": "^1.8.4"
+  }
+}
