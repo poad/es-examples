@@ -3,9 +3,9 @@
 
 
 "@electron/get@^1.0.1":
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/@electron/get/-/get-1.9.0.tgz#7fa6e61d7ff50fb82a8a41f437af7de3b97aa9a5"
-  integrity sha512-OBIKtF6ttIJotDXe4KJMUyTBO4xMii+mFjlA8R4CORuD4HvCUaCK3lPjhdTRCvuEv6gzWNbAvd9DNBv0v780lw==
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/@electron/get/-/get-1.10.0.tgz#258fdda22bbd5a247e0b663ba9c525dedc1bdfff"
+  integrity sha512-hlueNXU51c3CwQjBw/i5fwt+VfQgSQVUTdicpCHkhEjNZaa4CXJ5W1GaxSwtLE2dvRmAHjpIjUMHTqJ53uojfg==
   dependencies:
     debug "^4.1.1"
     env-paths "^2.2.0"
@@ -79,9 +79,9 @@ buffer-from@^1.0.0:
   integrity sha512-MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==
 
 buffer@^5.5.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.5.0.tgz#9c3caa3d623c33dd1c7ef584b89b88bf9c9bc1ce"
-  integrity sha512-9FTEDjLjwoAkEwyMGDjYJQN2gfRgOKBKRfiglhvibGbpeeU/pQn1bJxQqm32OD/AIeEuHxU9roxXxg34Byp/Ww==
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.6.0.tgz#a31749dc7d81d84db08abf937b6b8c4033f62786"
+  integrity sha512-/gDYp/UtU0eA1ys8bOs9J6a+E/KWIY+DZ+Q2WESNUA0jFRsJOc0SNUO6xJ5SGA1xueg3NL65W6s+NY5l9cunuw==
   dependencies:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
@@ -140,9 +140,9 @@ config-chain@^1.1.11:
     proto-list "~1.2.1"
 
 core-js@^3.6.4:
-  version "3.6.4"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.6.4.tgz#440a83536b458114b9cb2ac1580ba377dc470647"
-  integrity sha512-4paDGScNgZP2IXXilaffL9X7968RuvwlkK3xWtZRVqgd8SYNiVKRJvkFd1aqqEuPfN7E68ZHEp9hDj6lHj4Hyw==
+  version "3.6.5"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.6.5.tgz#7395dc273af37fb2e50e9bd3d9fe841285231d1a"
+  integrity sha512-vZVEEwZoIsI+vPEuoF9Iqf5H7/M3eeQqWlQnYa8FSKKePuYTf5MWnxb5SDAzCa60b3JBRS5g9b+Dq7b1y/RCrA==
 
 core-util-is@~1.0.0:
   version "1.0.2"
@@ -212,9 +212,9 @@ duplexer3@^0.1.4:
   integrity sha1-7gHdHKwO08vH/b6jfcCo8c4ALOI=
 
 electron@^8.1.1:
-  version "8.2.1"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-8.2.1.tgz#0341ea01272a69f4f3a2bd4cb41521adb1e4ddcf"
-  integrity sha512-+1PispFqjyKj3VeOPbEKEl6LYxPW41OxHgh9CGN8KeGygsKDHSZuuG9rYc+b9NeeaAl+gnV9VO2JOe7BIzXyOg==
+  version "8.2.2"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-8.2.2.tgz#6ddb27c1f15fda5f6e891e1ad13c0a0d15b0f133"
+  integrity sha512-GH4RCbpuzEn3XpTmsf+wLaJ2KOPSOoBJvQ0s6ftTLs5+IQEgKZvkdYCj8TCBNXFhss31RT3BUqoEQQUyZErK0A==
   dependencies:
     "@electron/get" "^1.0.1"
     "@types/node" "^12.0.12"
@@ -584,9 +584,9 @@ semver-compare@^1.0.0:
   integrity sha1-De4hahyUGrN+nvsXiPavxf9VN/w=
 
 semver@^7.1.2:
-  version "7.2.1"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-7.2.1.tgz#d997aa36bdbb00b501ae4ac4c7d17e9f7a587ae5"
-  integrity sha512-aHhm1pD02jXXkyIpq25qBZjr3CQgg8KST8uX0OWXch3xE6jw+1bfbWnCjzMwojsTquroUmKFHNzU6x26mEiRxw==
+  version "7.3.2"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.2.tgz#604962b052b81ed0786aae84389ffba70ffd3938"
+  integrity sha512-OrOb32TeeambH6UrhtShmF7CRDqhL6/5XpPNp2DuRH6+9QLw/orhp72j87v8Qa1ScDkvrrBNpZcDejAirJmfXQ==
 
 serialize-error@^5.0.0:
   version "5.0.0"
