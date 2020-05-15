@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/poad/es-examples#readme",
   "devDependencies": {
-    "electron": "^8.1.1"
+    "electron": "^8.3.0"
   },
   "dependencies": {}
 }
