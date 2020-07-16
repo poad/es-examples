@@ -24,7 +24,7 @@
     "@aws-amplify/core" "^3.4.2"
     axios "0.19.0"
 
-"@aws-amplify/api@^3.1.18":
+"@aws-amplify/api@^3.1.19":
   version "3.1.19"
   resolved "https://registry.yarnpkg.com/@aws-amplify/api/-/api-3.1.19.tgz#e68a29759874ac85f5d9783dcf36b23d7559436f"
   integrity sha512-mVaRWX2M7kNQpFX/51ITbKPkVtF1nB0I6qwbetQHlFgsK/r7bWGldhueHtXs7tJs1TM1EwlhshSSLwSI5p7iNw==
@@ -64,7 +64,7 @@
     url "^0.11.0"
     zen-observable-ts "0.8.19"
 
-"@aws-amplify/pubsub@^3.0.19", "@aws-amplify/pubsub@^3.0.20":
+"@aws-amplify/pubsub@^3.0.20":
   version "3.0.20"
   resolved "https://registry.yarnpkg.com/@aws-amplify/pubsub/-/pubsub-3.0.20.tgz#6cd0a862cf21c107d043b1d92600b812c880e8c8"
   integrity sha512-/dGyStsLyscrhOOt7fXqbKH4K4+zu/GU61QmULcrVErX+5h5kR+RXMPUklp96s8Ue9wd2EiJBLhnQ4IxJlkGYw==
