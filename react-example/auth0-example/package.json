@@ -32,7 +32,6 @@
     ]
   },
   "devDependencies": {
-    "@auth0/auth0-spa-js": "^1.10.0",
     "react-router-dom": "^5.2.0"
   }
 }

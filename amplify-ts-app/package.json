@@ -1,0 +1,73 @@
+{
+  "name": "next-ts-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "jest --passWithNoTests",
+    "dev": "next",
+    "build": "next build && next export && rm -rf build && mv out build",
+    "start": "next start",
+    "lint": "eslint --ext .ts,.js,.tsx,.jsx src"
+  },
+  "lint-staged": {
+    "src/*.{ts,js,tsx,jsx}": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@apollo/client": "^3.2.5",
+    "@auth0/auth0-react": "^1.1.0",
+    "@auth0/auth0-spa-js": "^1.12.1",
+    "@aws-amplify/api-graphql": "^1.2.5",
+    "@aws-amplify/auth": "^3.4.5",
+    "@aws-amplify/core": "^3.5.5",
+    "@aws-amplify/ui-react": "^0.2.22",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/styles": "^4.10.0",
+    "@types/jwt-decode": "^2.2.1",
+    "@types/node": "^14.11.8",
+    "@types/react": "^16.9.52",
+    "@types/react-loader": "^2.4.4",
+    "@types/styled-jsx": "^2.2.8",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "2.4.6",
+    "aws-amplify": "^3.3.2",
+    "aws-amplify-react": "^4.2.6",
+    "aws-appsync": "^4.0.1",
+    "axios": "^0.20.0",
+    "cross-fetch": "^3.0.6",
+    "graphql": "^15.3.0",
+    "graphql-tag": "^2.11.0",
+    "next": "^9.5.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-loader": "^2.4.7",
+    "styled-jsx": "^3.3.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.2.0",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-airbnb-typescript": "^11.0.0",
+    "eslint-config-import": "^0.13.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.0.2",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.21.2",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "lint-staged": "^10.4.0",
+    "next-compose-plugins": "^2.2.0",
+    "next-transpile-modules": "^4.1.0",
+    "ts-jest": "^26.4.0",
+    "typescript": "^4.0.3"
+  }
+}

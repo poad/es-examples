@@ -1,0 +1,31 @@
+{
+  "api": {
+    "ToDo": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "OPENID_CONNECT",
+            "openIDConnectConfig": {
+              "name": "Auth0",
+              "issuerUrl": "https://amplify-oauth.us.auth0.com/",
+              "clientId": "",
+              "authTTL": "0",
+              "iatTTL": "0"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        }
+      }
+    }
+  },
+  "auth": {
+    "amplifytypescriptapp2a2065e9": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
