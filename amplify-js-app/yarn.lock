@@ -423,10 +423,15 @@
     "@aws-sdk/types" "1.0.0-gamma.6"
     tslib "^1.8.0"
 
-"@aws-sdk/types@1.0.0-gamma.6", "@aws-sdk/types@^1.0.0-alpha.0":
+"@aws-sdk/types@1.0.0-gamma.6":
   version "1.0.0-gamma.6"
   resolved "https://registry.yarnpkg.com/@aws-sdk/types/-/types-1.0.0-gamma.6.tgz#ec2bbf8abe05632a1fb2468dbd76096691dcfb89"
   integrity sha512-5mQGLqXw269oXH4bxA3iK+Pnhy72wjIa6ccsLJVypyk1ZYiJq8Xk/ratosvZ4CDAnSwnUS1BibtxP8zrY14HnA==
+
+"@aws-sdk/types@^1.0.0-alpha.0":
+  version "1.0.0-gamma.7"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/types/-/types-1.0.0-gamma.7.tgz#ecde5064187bb70bcb45bffdb3625ce821d5641e"
+  integrity sha512-mPhtEru4QXDUMuiHMZo+McW1p35Ke2yNmjY4Snxb9b1YFVTUIcii88sJRfhxM+UL0WBW8s9/DDAGt81eum4mEg==
 
 "@aws-sdk/url-parser-browser@1.0.0-gamma.7":
   version "1.0.0-gamma.7"
@@ -492,9 +497,9 @@
     tslib "^1.8.0"
 
 "@aws-sdk/util-locate-window@^1.0.0-alpha.0":
-  version "1.0.0-gamma.6"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/util-locate-window/-/util-locate-window-1.0.0-gamma.6.tgz#f8ec924cb9b0174a15bfb3b7697cd7050afb9d48"
-  integrity sha512-l9i1aHQON7uXLNEOvYsFXUMXya3lPWg2nr/B8hEfGzW4F3OxHEvpmeXuAWuYcFiXysTPhnR/coOz1bKon988Rw==
+  version "1.0.0-gamma.7"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/util-locate-window/-/util-locate-window-1.0.0-gamma.7.tgz#66eed5fd451454b86ec5578a5d9ba7ed538407ef"
+  integrity sha512-CTbNsSbN/xoCQaK5Y86nF9owcBTapu4IrRBdGybF3e2pejzaSongWq549SrMlsoxgU0P3YDnSgsZO3i+7hw1IA==
   dependencies:
     tslib "^1.8.0"
 
@@ -521,10 +526,17 @@
     "@aws-sdk/types" "1.0.0-gamma.6"
     tslib "^1.8.0"
 
-"@aws-sdk/util-utf8-browser@1.0.0-gamma.6", "@aws-sdk/util-utf8-browser@^1.0.0-alpha.0":
+"@aws-sdk/util-utf8-browser@1.0.0-gamma.6":
   version "1.0.0-gamma.6"
   resolved "https://registry.yarnpkg.com/@aws-sdk/util-utf8-browser/-/util-utf8-browser-1.0.0-gamma.6.tgz#bdf5bcc98683eff184d8da00cc101d3e05b44614"
   integrity sha512-JIT2wPZKdOGynAD6V5ZhGT1XlHJbOWAYn0zQUgf4fkfcwwsfjXp9MALptdavKG/N7plq6p7z5JxMUP/VGKXyYA==
+  dependencies:
+    tslib "^1.8.0"
+
+"@aws-sdk/util-utf8-browser@^1.0.0-alpha.0":
+  version "1.0.0-gamma.7"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/util-utf8-browser/-/util-utf8-browser-1.0.0-gamma.7.tgz#4ba27bf889ec14ad47bc9a1b96fbb8d86312d70c"
+  integrity sha512-ty4b6yjgUN4YZVcLy6hiSgFGLLgSlSo5Vz+z5HRHqqdUasnawTfA5bR46voygl9pIm5VB/+rk0+R8Ai1S8LX2w==
   dependencies:
     tslib "^1.8.0"
 
