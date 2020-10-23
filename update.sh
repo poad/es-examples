@@ -12,7 +12,7 @@ YARN_PROJECTS="\
   nuxt-example/hello-world\
   nuxt-example/nuxt-ts-spa-example\
   nuxt-example/nuxt-typescript-example\
-  nuxt-example/nuxt-vuetify-example
+  nuxt-example/nuxt-vuetify-example\
   react-example/auth0-example
 "
 
