@@ -19,4 +19,22 @@ NEXT_PUBLIC_AWS_COGNITO_OAUTH_DOMAIN="{Cognito User PoolのOAuthドメイン}"
 NEXT_PUBLIC_AWS_COGNITO_OAUTH_REDIRECT_SIGNIN="{Cognito User PoolのWeb Client のcallbackUrl}"
 NEXT_PUBLIC_AWS_COGNITO_OAUTH_REDIRECT_SIGNOUT="{Cognito User PoolのWeb Client のlogoutUrl}"
 ```
-5. `yarn start` してローカルで動作確認する
+5. S3バケットのCORSを設定する
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+<CORSRule>
+    <ID>S3CORSRuleId1</ID>
+    <AllowedOrigin>http://localhost:3000</AllowedOrigin>
+    <AllowedMethod>HEAD</AllowedMethod>
+    <AllowedMethod>GET</AllowedMethod>
+    <MaxAgeSeconds>3000</MaxAgeSeconds>
+    <ExposeHeader>x-amz-server-side-encryption</ExposeHeader>
+    <ExposeHeader>x-amz-request-id</ExposeHeader>
+    <ExposeHeader>x-amz-id-2</ExposeHeader>
+    <ExposeHeader>ETag</ExposeHeader>
+    <AllowedHeader>*</AllowedHeader>
+</CORSRule>
+</CORSConfiguration>
+```
+6. `yarn start` してローカルで動作確認する
