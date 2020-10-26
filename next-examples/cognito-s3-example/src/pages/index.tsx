@@ -8,17 +8,25 @@ import styles from '../styles/Home.module.css';
 import awsconfig from '../aws-config';
 
 Amplify.configure(awsconfig);
+console.log(awsconfig.Storage.AWSS3)
+
+interface ListObjectItem {
+  eTag: string,
+  key: string,
+  lastModified: Date,
+  size: number
+}
+
+type ListObjectResponse = ListObjectItem[];
 
 const Home = (): JSX.Element => {
   const [user, setUser] = useState<CognitoUser | undefined>(undefined);
+  const [list, setList] = useState<ListObjectItem[]>([]);
 
   const listFiles = () => {
-    Promise.all([Storage.list('/',
-      { identityId: 'us-west-2:d563eec9-b4d4-479c-886e-b32699ce2ffc' })
-      .then((result) => {
-        // for debug
-        // eslint-disable-next-line no-console
-        console.log(result);
+    Promise.all([Storage.list('')
+      .then((result: ListObjectResponse) => {
+        setList(result);
       })
     // eslint-disable-next-line no-console
       .catch((err) => console.log(err))]);
@@ -56,8 +64,13 @@ const Home = (): JSX.Element => {
   useEffect(() => {
     if (user !== undefined) {
       listFiles();
+    } else {
+      getUser();
+      if (user !== undefined) {
+        listFiles();
+      }
     }
-  }, [user]);
+  }, [user, list]);
 
   return (
     <div className={styles.container}>
@@ -76,6 +89,11 @@ const Home = (): JSX.Element => {
           <div>
             <AmplifySignOut />
           </div>
+          <ul>
+            {
+              list.map(item => (<li>{ item.key }</li>))
+            }
+          </ul>
         </main>
 
         <footer className={styles.footer}>
