@@ -13,7 +13,10 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - uses: docker://node:lts-buster-slim
-    - run: ./update.sh
+    - name: Update modules
+      uses: ./.github/actions/npm_module_update_script_runner
+      with:
+        script_path: ./update.sh
     - name: Commit files
       run: |
         git config --local user.email "ken-yo@mbr.nifty.com"
