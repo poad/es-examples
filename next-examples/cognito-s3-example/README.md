@@ -18,14 +18,17 @@ NEXT_PUBLIC_AWS_COGNITO_ID_POOL_ID="{Cognito Identity PoolのID}"
 NEXT_PUBLIC_AWS_COGNITO_OAUTH_DOMAIN="{Cognito User PoolのOAuthドメイン}"
 NEXT_PUBLIC_AWS_COGNITO_OAUTH_REDIRECT_SIGNIN="{Cognito User PoolのWeb Client のcallbackUrl}"
 NEXT_PUBLIC_AWS_COGNITO_OAUTH_REDIRECT_SIGNOUT="{Cognito User PoolのWeb Client のlogoutUrl}"
+NEXT_PUBLIC_AWS_S3_PUBLIC_PREFIX=""
+NEXT_PUBLIC_AWS_S3_PREFIX="contents"
+
 ```
 5. S3バケットのCORSを設定する
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
 <CORSRule>
-    <ID>S3CORSRuleId1</ID>
-    <AllowedOrigin>http://localhost:3000</AllowedOrigin>
+    <ID>S3CORSRule</ID>
+    <AllowedOrigin>*</AllowedOrigin>
     <AllowedMethod>HEAD</AllowedMethod>
     <AllowedMethod>GET</AllowedMethod>
     <MaxAgeSeconds>3000</MaxAgeSeconds>
@@ -38,3 +41,7 @@ NEXT_PUBLIC_AWS_COGNITO_OAUTH_REDIRECT_SIGNOUT="{Cognito User PoolのWeb Client 
 </CORSConfiguration>
 ```
 6. `yarn start` してローカルで動作確認する
+7. `yarn build` してトランスパイルと静的ページを出力する
+8. buildディレクトリー配下をS3バケットへアップロードする
+9. sample 配下をS3バケットへアップロードする
+10. 公開する

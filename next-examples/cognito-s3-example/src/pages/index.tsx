@@ -6,9 +6,16 @@ import { CognitoUser } from 'amazon-cognito-identity-js';
 import Storage from '@aws-amplify/storage';
 import styles from '../styles/Home.module.css';
 import awsconfig from '../aws-config';
+import S3Directory from 'components/s3directory';
 
 Amplify.configure(awsconfig);
-console.log(awsconfig.Storage.AWSS3)
+// console.log(awsconfig.Storage.AWSS3)
+
+Storage.configure({
+  customPrefix: {
+      public: ''
+  }
+})
 
 interface ListObjectItem {
   eTag: string,
@@ -24,7 +31,7 @@ const Home = (): JSX.Element => {
   const [list, setList] = useState<ListObjectItem[]>([]);
 
   const listFiles = () => {
-    Promise.all([Storage.list('')
+    Promise.all([Storage.list('contents')
       .then((result: ListObjectResponse) => {
         setList(result);
       })
@@ -75,7 +82,7 @@ const Home = (): JSX.Element => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>メインページ</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -90,9 +97,7 @@ const Home = (): JSX.Element => {
             <AmplifySignOut />
           </div>
           <ul>
-            {
-              list.map(item => (<li>{ item.key }</li>))
-            }
+            <S3Directory s3keys={list.map(item => item.key)} />
           </ul>
         </main>
 
