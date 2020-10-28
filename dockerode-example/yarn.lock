@@ -339,9 +339,9 @@ http-cache-semantics@^4.0.0:
   integrity sha512-carPklcUh7ROWRK7Cv27RPtdhYhUsela/ue5/jKzjegVvXDqM2ILE9Q2BGn9JZJh1g87cp56su/FgQSzcWS8cQ==
 
 ieee754@^1.1.13:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.2.0.tgz#199187d07b31d4aa68ed02311914049795868ea6"
-  integrity sha512-EWa7B4Ik9ncTIIojzGoKzpUdswDKO6v1BQ0pcKajYCrZckY9gNjiEparSGlyz5C2HcpV62qiVkmLBCPx77Hq2g==
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.2.1.tgz#8eb7a10a63fff25d15a57b001586d177d1b0d352"
+  integrity sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==
 
 inherits@^2.0.3, inherits@^2.0.4, inherits@~2.0.3:
   version "2.0.4"
