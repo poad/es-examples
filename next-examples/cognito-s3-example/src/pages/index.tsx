@@ -54,9 +54,6 @@ const Home = (): JSX.Element => {
     // }
   }, []);
 
-  console.log(authState);
-  console.log(user?.username);
-
   return (
     <Layout username={user?.username}>
       <AmplifyAuthenticator>

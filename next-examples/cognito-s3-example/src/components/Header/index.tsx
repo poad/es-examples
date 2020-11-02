@@ -27,7 +27,7 @@ const Header = (props: HeaderProps): JSX.Element => {
         }
         nav {
           max-width: 42rem;
-          margin: 1.5rem auto;
+          margin: 0.5rem auto;
         }
         ul {
           display: flex;
