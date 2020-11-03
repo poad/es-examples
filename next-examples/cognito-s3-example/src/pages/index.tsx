@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import Amplify from 'aws-amplify';
+import Amplify, { Auth } from 'aws-amplify';
 
 import { AmplifyAuthenticator, AmplifySignIn, AmplifySignOut } from '@aws-amplify/ui-react';
 import { AuthState, onAuthUIStateChange, CognitoUserInterface } from '@aws-amplify/ui-components';
 import Storage from '@aws-amplify/storage';
 
 import Layout from 'components/Layout';
+import S3Directory from 'components/s3directory';
 import styles from '../styles/Home.module.css';
 import awsconfig from '../aws-config';
-
-import S3Directory from 'components/s3directory';
 
 Amplify.configure(awsconfig);
 // console.log(awsconfig.Storage.AWSS3)
@@ -18,9 +17,9 @@ Storage.configure({
   customPrefix: {
     public: '',
     protected: '',
-    private: ''
-  }
-})
+    private: '',
+  },
+});
 
 interface ListObjectItem {
   eTag: string,
@@ -32,26 +31,25 @@ interface ListObjectItem {
 type ListObjectResponse = ListObjectItem[];
 
 const Home = (): JSX.Element => {
-  const [authState, setAuthState] = useState<AuthState>();
+  const [, setAuthState] = useState<AuthState | undefined>(undefined);
   const [user, setUser] = useState<CognitoUserInterface | undefined>(undefined);
-  useEffect(() => {
-    return onAuthUIStateChange((nextAuthState, authData) => {
-      setAuthState(nextAuthState);
-      setUser(authData as CognitoUserInterface);
-    });
-  }, []);
+  useEffect(() => onAuthUIStateChange((nextAuthState, authData) => {
+    setAuthState(nextAuthState);
+    setUser(authData as CognitoUserInterface);
+  }), []);
 
   const [list, setList] = useState<ListObjectItem[]>([]);
   useEffect(() => {
-    // if (authState === AuthState.SignedIn && user) {
+    if (user === undefined) {
+      Promise.all([Auth.currentAuthenticatedUser().then(u => setUser(u))]);
+    }
+
     Promise.all([Storage.list('contents')
       .then((result: ListObjectResponse) => {
-        // console.log(result);
         setList(result);
       })
-      // eslint-disable-next-line no-console
+    // eslint-disable-next-line no-console
       .catch((err) => console.log(err))]);
-    // }
   }, []);
 
   return (
@@ -67,14 +65,8 @@ const Home = (): JSX.Element => {
           <div>
             <AmplifySignOut />
           </div>
-          {
-            authState === AuthState.SignedIn ? (
-
-                <S3Directory s3keys={list.map(item => item.key)} />
-
-            ) : ""
-          }
-          </main>
+          <S3Directory s3Objects={list} />
+        </main>
       </AmplifyAuthenticator>
 
       <footer className={styles.footer}>

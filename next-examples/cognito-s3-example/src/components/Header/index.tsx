@@ -1,25 +1,33 @@
 import React from 'react';
 import List from '@material-ui/core/List';
-import { Avatar, ListItem, ListItemAvatar, ListItemText } from '@material-ui/core';
+import {
+  Avatar, ListItem, ListItemAvatar, ListItemText,
+} from '@material-ui/core';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 
 export interface HeaderProps {
   username?: string
 }
 
-const Header = (props: HeaderProps): JSX.Element => {
+const Header = (props: HeaderProps): JSX.Element => (
+  <header>
+    <nav>
+      <List>
+        {
+          props.username !== undefined ? (
+            <ListItem>
+              <ListItemAvatar>
+                <Avatar>
+                  <AccountBoxIcon />
+                </Avatar>
+              </ListItemAvatar>
+              <ListItemText primary={props.username} />
+            </ListItem>) : ''
+        }
+      </List>
+    </nav>
 
-  return (
-    <header>
-      <nav>
-        <List>
-          {
-            props.username !== undefined ? <ListItem><ListItemAvatar><Avatar><AccountBoxIcon /></Avatar></ListItemAvatar><ListItemText primary={props.username} /></ListItem> : ""
-          }
-        </List>
-      </nav>
-
-      <style jsx>{`
+    <style jsx>{`
         header {
           padding: 0.2rem;
           color: #fff;
@@ -53,8 +61,7 @@ const Header = (props: HeaderProps): JSX.Element => {
           background: none;
         }
       `}</style>
-    </header>
-  );
-};
+  </header>
+);
 
 export default Header;
