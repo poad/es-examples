@@ -3,11 +3,8 @@
 CUR=$(pwd)
 
 YARN_PROJECTS="\
-  amplify-js-app\
   dockerode-example\
-  next-examples/blog/next-amplify-example\
   next-examples/cognito-s3-example\
-  next-examples/next-amplify-example\
   next-examples/next-auth0-example\
   next-examples/next-ts-examples\
   nuxt-example/hello-world\
