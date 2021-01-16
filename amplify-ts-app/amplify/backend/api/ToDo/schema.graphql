@@ -1,5 +1,0 @@
-type Todo @aws_oidc @model {
-  id: ID!
-  name: String!
-  description: String
-}
