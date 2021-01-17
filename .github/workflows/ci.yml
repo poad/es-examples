@@ -1,0 +1,62 @@
+name: Build and Test
+ 
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  yarn-base-test:
+    strategy:
+      matrix:
+        path: 
+          - dockerode-example
+          - next-examples/cognito-s3-example
+          - next-examples/cognito-s3-example/infra
+          - next-examples/next-auth0-example
+          - next-examples/next-ts-examples
+          - next-examples/cognito-aws-console-example/app
+          - next-examples/cognito-aws-console-example/infra
+          - nuxt-example/hello-world
+          - nuxt-example/nuxt-ts-spa-example
+          - nuxt-example/nuxt-typescript-example
+          - nuxt-example/nuxt-vuetify-example
+
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+
+      - name: Build and lint
+        run: |
+          yarn install
+          yarn lint --fix
+          yarn build
+          yarn test
+
+  npm-base-test:
+    strategy:
+      matrix:
+        path: 
+          - elm-electron
+          - hello-electron
+
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+
+      - name: Build and lint
+        run: |
+          npm install
+          npm run lint --fix
+          npm run build
+          npm run test
