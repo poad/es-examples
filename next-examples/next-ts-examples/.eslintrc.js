@@ -2,30 +2,25 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true
+    node: true,
+    es2020: true,
+    jest: true
   },
-  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: "module",
     ecmaFeatures: {
       jsx: true
-    }
+    },
+    project: './tsconfig.json',
+    useJSXTextNode: true
   },
-  plugins: [
-    'prettier'
-  ],
   extends: [
-    'prettier',
-    'prettier/react',
-    'prettier/@typescript-eslint',
-    'plugin:prettier/recommended',
+    "airbnb-typescript/base",
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended'
   ],
   plugins: [
-    'prettier',
-    'react'
+    'react',
+    'jest'
   ],
   settings: {
     react: {
@@ -43,8 +38,7 @@ module.exports = {
       'always',
       { markers: ['/ <reference'] }
     ],
-    'prettier/prettier': 'error',
-    'max-len': ['error', {'code': 120}],
+    'max-len': ['error', {'code': 100}],
     'prefer-promise-reject-errors': ['off'],
     'react/jsx-filename-extension': ['off'],
     'react/prop-types': ['off'],

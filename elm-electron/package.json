@@ -5,17 +5,21 @@
   "main": "src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "build": "node build-win && node build-mac && node build-linux",
+    "start": "electron .",
+    "lint": "npx elm-review --template jfmengels/elm-review-unused/example"
   },
   "author": "poad",
   "license": "Apache-2.0",
   "devDependencies": {
-    "electron": "^9.4.1",
+    "electron-builder": "^22.9.1",
+    "elm-review": "^2.4.0",
     "svjsl": "^1.9.4",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
+    "electron": "^11.2.0",
     "elm": "0.19.1-3"
   }
 }

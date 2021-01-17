@@ -1,22 +1,39 @@
-// next.config.js
-const withPlugins = require('next-compose-plugins')
-const offline = require('next-offline')
+//// aws-amplify-react を使う場合などは以下のコメントアウトを有効にする
+// const withCSS = require('@zeit/next-css')
+// if (typeof require !== "undefined") {
+//   require.extensions[".less"] = () => { };
+//   require.extensions[".css"] = (file) => { };
+// }
 
-const nextConfig = {
-  target: process.env.NODE_ENV !== 'production' ? 'server' : 'serverless',
-  dontAutoRegisterSw: true,
-  generateSw: false,
-  devSwSrc: 'src/public/sw.js',
-  workboxOpts: {
-    swSrc: 'src/public/sw.js',
-    swDest: 'src/public/service-worker.js'
-  },
-  // Exposes Server ENV Vars To Client Using Webpack
-  env: {
-    AUTH0_CLIENT_ID: process.env['AUTH0_CLIENT_ID'],
-    AUTH0_DOMAIN: process.env['AUTH0_DOMAIN'],
-    CALLBACK_URL: process.env['CALLBACK_URL']
-  }
-}
+// const resolve = require('resolve')
+// global.navigator = () => null
+// const config = {
+//   webpack(config, options) {
+//     const { dir, isServer } = options
+//     config.externals = []
+//     if (isServer) {
+//       config.externals.push((context, request, callback) => {
+//         resolve(request, { basedir: dir, preserveSymlinks: true }, (err, res) => {
+//           if (err) {
+//             return callback()
+//           }
+//           if (
+//             res.match(/node_modules[/\\].*\.css/)
+//             && !res.match(/node_modules[/\\]webpack/)
+//             && !res.match(/node_modules[/\\]@aws-amplify/)
+//           ) {
+//             return callback(null, `css ${request}`)
+//           }
 
-module.exports = withPlugins([[offline]], nextConfig)
+//           callback()
+//         })
+//       })
+//     }
+
+//     return config
+//   }
+// }
+
+// module.exports = withCSS(config)
+
+module.exports = {}

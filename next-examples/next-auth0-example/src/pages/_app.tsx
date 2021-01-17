@@ -6,9 +6,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../styles/theme';
 import { AuthProvider } from 'use-auth0';
 
-
 interface HistoryState {
-  targetUrl: string
+  targetUrl: string;
 }
 
 interface Auth0Config {
@@ -36,7 +35,7 @@ const auth0Param: Auth0Param = {
 };
 
 class MyApp extends App {
-  componentDidMount() {
+  componentDidMount(): void {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles && jssStyles.parentNode) {
@@ -44,15 +43,11 @@ class MyApp extends App {
     }
   }
 
-  onRedirectCallback = (appState: HistoryState) => {
-    history.state.push(
-      appState && appState.targetUrl
-        ? appState.targetUrl
-        : window.location.pathname
-    );
+  onRedirectCallback = (appState: HistoryState): void => {
+    history.state.push(appState && appState.targetUrl ? appState.targetUrl : window.location.pathname);
   };
-  
-  render() {
+
+  render(): JSX.Element {
     const { Component, pageProps, router } = this.props;
     return (
       <ThemeProvider theme={theme}>
