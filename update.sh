@@ -5,9 +5,11 @@ CUR=$(pwd)
 YARN_PROJECTS="\
   dockerode-example\
   next-examples/cognito-s3-example\
+  next-examples/cognito-s3-example/infra\
   next-examples/next-auth0-example\
   next-examples/next-ts-examples\
-  next-examples/cognito-aws-console-example\
+  next-examples/cognito-aws-console-example/app\
+  next-examples/cognito-aws-console-example/infra\
   nuxt-example/hello-world\
   nuxt-example/nuxt-ts-spa-example\
   nuxt-example/nuxt-typescript-example\
