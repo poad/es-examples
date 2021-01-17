@@ -7,56 +7,70 @@ on:
 
 jobs:
   yarn-base-test:
+
     strategy:
       matrix:
-        path: 
-          - dockerode-example
-          - next-examples/cognito-s3-example
-          - next-examples/cognito-s3-example/infra
-          - next-examples/next-auth0-example
-          - next-examples/next-ts-examples
-          - next-examples/cognito-aws-console-example/app
-          - next-examples/cognito-aws-console-example/infra
-          - nuxt-example/hello-world
-          - nuxt-example/nuxt-ts-spa-example
-          - nuxt-example/nuxt-typescript-example
-          - nuxt-example/nuxt-vuetify-example
-
+        targets:
+          - path: dockerode-example
+            test: false
+            lint: true
+          - path: hello-electron
+            test: false
+            lint: true
+          - path: next-examples/cognito-aws-console-example/app
+            test: true
+            lint: true
+          - path: next-examples/cognito-aws-console-example/infra
+            test: true
+            lint: false
+          - path: next-examples/cognito-s3-example
+            test: true
+            lint: true
+          - path: next-examples/cognito-s3-example/infra
+            test: true
+            lint: false
+          - path: next-examples/next-auth0-example
+            test: true
+            lint: true
+          - path: next-examples/next-ts-examples
+            test: true
+            lint: true
+          # - path: nuxt-example/hello-world
+          #   test: true
+          #   lint: false
+          # - path: nuxt-example/nuxt-ts-spa-example
+          #   test: true
+          #   lint: false
+          # - path: nuxt-example/nuxt-typescript-example
+          #   test: true
+          #   lint: false
+          # - path: nuxt-example/nuxt-vuetify-example
+          #   test: true
+          #   lint: false
+          - path: elm-electron
+            test: true
+            lint: false
 
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+      - uses: actions/checkout@master
       - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
 
       - name: Build and lint
+        env:
+          AUTH0_DOMAIN: test
+          AUTH0_CLIENT_ID: test
+          CALLBACK_URL: http://localhost:3000
         run: |
+          cd ${{ matrix.targets.path }}
           yarn install
-          yarn lint --fix
+          if [ ${{ matrix.targets.lint }} == "true" ]; then
+            yarn lint --fix
+          fi
           yarn build
-          yarn test
-
-  npm-base-test:
-    strategy:
-      matrix:
-        path: 
-          - elm-electron
-          - hello-electron
-
-
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-      - name: Use Node.js 14.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14.x
-
-      - name: Build and lint
-        run: |
-          npm install
-          npm run lint --fix
-          npm run build
-          npm run test
+          if [ ${{ matrix.targets.path }} == "true" ]; then
+            yarn test
+          fi

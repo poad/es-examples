@@ -1,3 +1,3 @@
 export interface SigninToken {
-    signinToken: string
+  signinToken: string
 }

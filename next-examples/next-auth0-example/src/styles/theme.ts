@@ -4,6 +4,7 @@ import { green } from '@material-ui/core/colors';
 // A theme with custom primary and secondary color.
 // It's optional.
 
+// eslint-disable-next-line  @typescript-eslint/no-explicit-any
 const options: any = {
   palette: {
     primary: {

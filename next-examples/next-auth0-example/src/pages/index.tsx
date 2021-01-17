@@ -1,8 +1,8 @@
 import React from 'react';
 import { Layout } from '../components/Layout';
 
-class Home extends React.Component {  
-  render() {
+class Home extends React.Component {
+  render(): JSX.Element {
     return (
       <Layout>
         <div className="hero">

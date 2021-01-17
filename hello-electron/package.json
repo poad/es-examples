@@ -2,10 +2,12 @@
   "name": "hello-electron",
   "version": "0.1.0",
   "description": "",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "build": "node build-win && node build-mac && node build-linux",
+    "start": "electron .",
+    "lint": "eslint --ext .js,.jsx src"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,12 @@
   },
   "homepage": "https://github.com/poad/es-examples#readme",
   "devDependencies": {
-    "electron": "^9.4.1"
+    "electron-builder": "^22.9.1",
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "electron": "^11.2.0"
+  }
 }

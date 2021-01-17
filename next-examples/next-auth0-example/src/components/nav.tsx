@@ -9,7 +9,7 @@ const links = [
   key: `nav-link-${link.href}-${link.label}`,
 }));
 
-const Nav = () => (
+const Nav = (): JSX.Element => (
   <nav>
     <ul>
       <li>

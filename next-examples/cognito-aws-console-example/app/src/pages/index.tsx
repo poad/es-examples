@@ -1,35 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import Amplify, { Auth } from 'aws-amplify';
-import Layout from '../components/Layout';
 import { ICredentials } from '@aws-amplify/core';
+import { Link } from '@material-ui/core';
+import {
+  withAuthenticator, AmplifySignOut,
+} from '@aws-amplify/ui-react';
 import { SigninToken } from '../interfaces';
-import { Link, TextField } from '@material-ui/core';
-import { withAuthenticator, AmplifyAuthenticator, AmplifySignIn, AmplifySignOut } from '@aws-amplify/ui-react';
+import Layout from '../components/Layout';
 import styles from '../styles/Home.module.css';
 import awsconfig from '../aws-config';
 
 Amplify.configure(awsconfig);
 
 const Home = (): JSX.Element => {
-
   const [signInToken, setSignInToken] = useState<string | undefined>(undefined);
 
   useEffect(
     () => {
       Auth.currentUserCredentials().then((credentials: ICredentials) => {
-
         const sessionId = credentials.accessKeyId;
         const sessionKey = credentials.secretAccessKey;
-        const sessionToken = credentials.sessionToken;
+        const { sessionToken } = credentials;
 
         if (credentials.authenticated) {
-          fetch(`api/?session=${encodeURIComponent(JSON.stringify({ sessionId, sessionKey, sessionToken }))}`)
-            .then(async (res: Response) => setSignInToken((await res.json() as SigninToken).signinToken))
-            .catch(console.error)
+          const session = JSON.stringify({ sessionId, sessionKey, sessionToken });
+          fetch(`api/?session=${encodeURIComponent(session)}`)
+            .then(async (res: Response) => setSignInToken(
+              (await res.json() as SigninToken).signinToken,
+            ))
+            // eslint-disable-next-line no-console
+            .catch(console.error);
         }
       })
+      // eslint-disable-next-line no-console
         .catch(console.error);
-    }, []
+    }, [],
   );
 
   return (
@@ -39,10 +44,11 @@ const Home = (): JSX.Element => {
 
           {
             signInToken !== undefined ? (
+              // eslint-disable-next-line max-len
               <Link href={`https://signin.aws.amazon.com/federation?Action=login&Destination=${encodeURIComponent('https://console.aws.amazon.com/')}&SigninToken=${signInToken}`} target='_blank'>AWS Managed Console</Link>
             ) : (
-                ''
-              )
+              ''
+            )
           }
           <AmplifySignOut />
         </main>
@@ -96,6 +102,6 @@ const Home = (): JSX.Element => {
         `}</style>
     </Layout>
   );
-}
+};
 
 export default withAuthenticator(Home);

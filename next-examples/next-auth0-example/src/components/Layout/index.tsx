@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme: Theme) =>
     toolbar: theme.mixins.toolbar,
     drawerPaper: {
       width: drawerWidth,
-      backgroundColor: theme.palette.primary.main
+      backgroundColor: theme.palette.primary.main,
     },
     content: {
       flexGrow: 1,
@@ -79,8 +79,7 @@ export const Layout: React.FC<LayoutProps> = (props) => {
   useEffect(() => {
     handleAuthentication();
   }, []);
-  
-  
+
   const drawer = (
     <div>
       <div className={classes.toolbar} />
@@ -88,26 +87,33 @@ export const Layout: React.FC<LayoutProps> = (props) => {
       <List>
         {['Info'].map((text) => (
           <ListItem button key={text} className={classes.menuItem}>
-            <ListItemIcon className={classes.menuItem}><DashboardIcon /></ListItemIcon>
+            <ListItemIcon className={classes.menuItem}>
+              <DashboardIcon />
+            </ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
         ))}
         {['Auth'].map(() => {
           if (isAuthenticated()) {
             return (
-              <ListItem button key='logout' onClick={logout} className={classes.menuItem}>
-                <ListItemIcon className={classes.menuItem}><ExitToAppIcon /></ListItemIcon>
-                <ListItemText primary='Logout' />
+              <ListItem button key="logout" onClick={logout} className={classes.menuItem}>
+                <ListItemIcon className={classes.menuItem}>
+                  <ExitToAppIcon />
+                </ListItemIcon>
+                <ListItemText primary="Logout" />
               </ListItem>
-            )
+            );
           } else {
-            return (<ListItem button key='logoin' onClick={login} className={classes.menuItem}>
-              <ListItemIcon className={classes.menuItem}><ExitToAppIcon /></ListItemIcon>
-              <ListItemText primary='Login' />
-            </ListItem>)
+            return (
+              <ListItem button key="logoin" onClick={login} className={classes.menuItem}>
+                <ListItemIcon className={classes.menuItem}>
+                  <ExitToAppIcon />
+                </ListItemIcon>
+                <ListItemText primary="Login" />
+              </ListItem>
+            );
           }
-        })
-      }
+        })}
       </List>
     </div>
   );
@@ -126,8 +132,7 @@ export const Layout: React.FC<LayoutProps> = (props) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-          </Typography>
+          <Typography variant="h6" noWrap></Typography>
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">
@@ -167,4 +172,4 @@ export const Layout: React.FC<LayoutProps> = (props) => {
       </main>
     </div>
   );
-}
+};
