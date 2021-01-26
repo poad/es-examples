@@ -19,7 +19,7 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "electron": "^11.2.0",
+    "electron": "^11.2.1",
     "elm": "0.19.1-3"
   }
 }
