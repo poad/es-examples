@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "electron-builder": "^22.9.1",
-    "elm-review": "^2.4.0",
+    "elm-review": "^2.4.1",
     "svjsl": "^1.9.4",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "electron": "^11.2.1",
+    "electron": "^11.2.2",
     "elm": "0.19.1-3"
   }
 }
