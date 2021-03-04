@@ -12,7 +12,7 @@
   "author": "poad",
   "license": "Apache-2.0",
   "devDependencies": {
-    "electron-builder": "^22.9.1",
+    "electron-builder": "^22.10.5",
     "elm-review": "^2.4.2",
     "svjsl": "^1.9.4",
     "webpack": "^4.46.0",
