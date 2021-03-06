@@ -14,4 +14,8 @@ const awsconfig = {
   },
 };
 
+export const appConfig = {
+  identityPoolAuthRoleArn: process.env.NEXT_PUBLIC_AWS_AUTH_ROLE_ARN as string,
+};
+
 export default awsconfig;

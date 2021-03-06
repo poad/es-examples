@@ -14,7 +14,6 @@ module.exports = {
     useJSXTextNode: true
   },
   extends: [
-    "airbnb-typescript/base",
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended'
   ],
