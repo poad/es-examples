@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@aws-amplify/storage": "latest",
-    "@aws-amplify/ui-components":"latest",
+    "@aws-amplify/ui-components": "latest",
     "@aws-amplify/ui-react": "latest",
     "@material-ui/core": "latest",
     "@material-ui/icons": "latest",
