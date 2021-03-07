@@ -18,10 +18,10 @@
     "@types/auth0": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
-    "@types/styled-jsx":"latest",
+    "@types/styled-jsx": "latest",
     "cross-fetch": "latest",
     "next": "latest",
-    "next-compose-plugins":"latest",
+    "next-compose-plugins": "latest",
     "next-offline": "latest",
     "react": "latest",
     "react-dom": "latest"
