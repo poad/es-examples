@@ -9,7 +9,7 @@ const region = app.node.tryGetContext("region") as string;
 const env = app.node.tryGetContext("env") as string;
 const groups = app.node.tryGetContext("groups") as GroupConfig[];
 
-new CognitoAwsConsoleInfraStack(app, `${env}-CognitoAwsConsoleInfraStack`, {
+new CognitoAwsConsoleInfraStack(app, `${env}-cognito-aws-console-infra-stack`, {
     groups,
     environment: env,
     env: {

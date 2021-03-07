@@ -1,39 +1,139 @@
 import React, { useState, useEffect } from 'react';
 import Amplify, { Auth } from 'aws-amplify';
-import { ICredentials } from '@aws-amplify/core';
 import { Link } from '@material-ui/core';
 import {
   withAuthenticator, AmplifySignOut,
 } from '@aws-amplify/ui-react';
+import {
+  CognitoIdentityClient, GetIdCommand, GetOpenIdTokenCommand
+} from '@aws-sdk/client-cognito-identity';
+import { AssumeRoleWithWebIdentityCommand, STSClient, Credentials } from '@aws-sdk/client-sts';
 import { SigninToken } from '../interfaces';
 import Layout from '../components/Layout';
 import styles from '../styles/Home.module.css';
-import awsconfig from '../aws-config';
+import awsconfig, { appConfig } from '../aws-config';
 
 Amplify.configure(awsconfig);
 
 const Home = (): JSX.Element => {
   const [signInToken, setSignInToken] = useState<string | undefined>(undefined);
 
+  const selectRole = (idTokenPayload: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [id: string]: any;
+  }): string => {
+    const preferredRole = idTokenPayload['cognito:preferred_role'];
+    if (preferredRole !== undefined) {
+      return preferredRole;
+    }
+    const roles = idTokenPayload['cognito:roles'];
+    if (Array.isArray(roles) 
+        && roles.filter(item => typeof(item) !== 'string').length === 0
+        && roles.length === 1) {
+      return roles[0];
+    }
+    return appConfig.identityPoolAuthRoleArn;
+  }
+
+  const assumeRoleWithWebIdentity = async (): Promise<Credentials | undefined> => {
+    try {
+      const currentCredentials = await Auth.essentialCredentials(
+        (await Auth.currentUserCredentials())
+      );
+      // console.dir(currentCredentials, { depth: null });
+      if (!currentCredentials.authenticated) {
+        return undefined;
+      }
+
+      const session = await Auth.currentSession();
+      if (!session.isValid) {
+        return undefined;
+      }
+
+      // console.log(`ID Token obj: ${JSON.stringify(session.getIdToken())}`);
+      // console.log(`RefreshToken obj: ${JSON.stringify(session.getRefreshToken())}`);
+      // console.log(`AccessToken obj: ${JSON.stringify(session.getAccessToken())}`);
+
+      // console.log(`ID Token: ${JSON.stringify(session.getIdToken().decodePayload())}`);
+      // console.log(`AccessToken: ${JSON.stringify(session.getAccessToken().decodePayload())}`);
+
+      const cognitoIdToken = session.getIdToken();
+      const idToken = cognitoIdToken.getJwtToken();
+
+      const payload = cognitoIdToken.decodePayload();
+
+      const logins: {
+        [key: string]: string
+      } = [{
+        key: `cognito-idp.${awsconfig.Auth.region}.amazonaws.com/${awsconfig.Auth.userPoolId}`,
+        value: idToken,
+      }].map((entry) => {
+        const entity: { [key: string]: string } = {};
+        entity[entry.key] = entry.value;
+        return entity;
+      }).reduce((cur, acc) => Object.assign(acc, cur));
+
+      const identityClient = new CognitoIdentityClient({
+        region: awsconfig.Auth.region,
+        credentials: {
+          ...currentCredentials,
+        }
+      });
+
+      const getIdResp = await identityClient.send(new GetIdCommand({
+        IdentityPoolId: awsconfig.Auth.identityPoolId,
+        Logins: logins,
+      }));
+
+      const WebIdentityToken = (await identityClient.send(new GetOpenIdTokenCommand({
+        IdentityId: getIdResp.IdentityId,
+        Logins: logins
+      }))).Token;
+
+      const RoleSessionName = payload['preferred_username'];
+
+      const RoleArn = selectRole(payload);
+
+      // console.log(`RoleArn: ${RoleArn}`);
+      
+      const request = new AssumeRoleWithWebIdentityCommand({
+        WebIdentityToken,
+        RoleArn,
+        RoleSessionName,
+        DurationSeconds: 43200,
+      });
+
+      return (await new STSClient({
+        region: awsconfig.Auth.region,
+        signingRegion: awsconfig.Auth.region,
+      }).send(request)).Credentials;
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
+  };
+
   useEffect(
     () => {
-      Auth.currentUserCredentials().then((credentials: ICredentials) => {
-        const sessionId = credentials.accessKeyId;
-        const sessionKey = credentials.secretAccessKey;
-        const { sessionToken } = credentials;
+      assumeRoleWithWebIdentity()
+        .then((credentials: Credentials | undefined) => {
+          if (credentials !== undefined) {
+            const sessionId = credentials.AccessKeyId;
+            const sessionKey = credentials.SecretAccessKey;
+            const sessionToken = credentials.SessionToken;
 
-        if (credentials.authenticated) {
-          const session = JSON.stringify({ sessionId, sessionKey, sessionToken });
-          fetch(`api/?session=${encodeURIComponent(session)}`)
-            .then(async (res: Response) => setSignInToken(
-              (await res.json() as SigninToken).signinToken,
-            ))
-            // eslint-disable-next-line no-console
-            .catch(console.error);
-        }
-      })
-      // eslint-disable-next-line no-console
+            const session = JSON.stringify({ sessionId, sessionKey, sessionToken });
+            fetch(`api/?session=${encodeURIComponent(session)}`)
+              .then(async (res: Response) => setSignInToken(
+                (await res.json() as SigninToken).signinToken,
+              ))
+              // eslint-disable-next-line no-console
+              .catch(console.error);
+          }
+        })
+        // eslint-disable-next-line no-console
         .catch(console.error);
+
     }, [],
   );
 

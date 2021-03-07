@@ -2,7 +2,7 @@ import * as cdk from '@aws-cdk/core';
 import * as cognito from '@aws-cdk/aws-cognito';
 import * as iam from '@aws-cdk/aws-iam';
 import { AccountRecovery, Mfa, OAuthScope, UserPoolClientIdentityProvider, UserPoolIdentityProvider } from '@aws-cdk/aws-cognito';
-import { Stack } from '@aws-cdk/core';
+import { Duration, Stack } from '@aws-cdk/core';
 import { ManagedPolicy } from '@aws-cdk/aws-iam';
 
 
@@ -43,9 +43,9 @@ export class CognitoAwsConsoleInfraStack extends cdk.Stack {
           required: false
         }
       },
-      mfa: Mfa.OPTIONAL,
+      mfa: Mfa.OFF,
       passwordPolicy: {
-        minLength: 12
+        minLength: 8
       },
       accountRecovery: AccountRecovery.EMAIL_ONLY
     });
@@ -80,13 +80,17 @@ export class CognitoAwsConsoleInfraStack extends cdk.Stack {
     };
     const identityPool = new cognito.CfnIdentityPool(this, 'CognitoAwsConsoleIdPool', {
       allowUnauthenticatedIdentities: false,
+      allowClassicFlow: true,
       cognitoIdentityProviders: [
         identityPoolProvider
       ],
-      identityPoolName: `${props.environment}-cognito-aws-console-idp`
+      identityPoolName: `${props.environment} cognito aws console idp`
     });
+    
+    // TODO https://github.com/aws/aws-cdk/issues/2041 sts:TagSession support
 
     const unauthenticatedRole = new iam.Role(this, 'CognitoDefaultUnauthenticatedRole', {
+      roleName: `${props.environment}-console-unauth-role`,
       assumedBy: new iam.FederatedPrincipal('cognito-identity.amazonaws.com', {
         "StringEquals": {
           "cognito-identity.amazonaws.com:aud": identityPool.ref
@@ -95,17 +99,27 @@ export class CognitoAwsConsoleInfraStack extends cdk.Stack {
           "cognito-identity.amazonaws.com:amr": "unauthenticated"
         },
       }, "sts:AssumeRoleWithWebIdentity"),
+      maxSessionDuration: Duration.hours(12),
     });
 
     unauthenticatedRole.addToPolicy(new iam.PolicyStatement({
       effect: iam.Effect.ALLOW,
       actions: [
-        "cognito-sync:*"
+        "cognito-sync:*",
+        "cognito-identity:*",
+      ],
+      resources: ["*"],
+    }));
+    unauthenticatedRole.addToPolicy(new iam.PolicyStatement({
+      effect: iam.Effect.ALLOW,
+      actions: [
+        "sts:*",
       ],
       resources: ["*"],
     }));
 
     const authenticatedRole = new iam.Role(this, 'CognitoDefaultAuthenticatedRole', {
+      roleName: `${props.environment}-console-auth-role`,
       assumedBy: new iam.FederatedPrincipal('cognito-identity.amazonaws.com', {
         "StringEquals": {
           "cognito-identity.amazonaws.com:aud": identityPool.ref
@@ -114,19 +128,20 @@ export class CognitoAwsConsoleInfraStack extends cdk.Stack {
           "cognito-identity.amazonaws.com:amr": "authenticated"
         },
       }, "sts:AssumeRoleWithWebIdentity"),
+      maxSessionDuration: Duration.hours(12),
     });
     authenticatedRole.addToPolicy(new iam.PolicyStatement({
       effect: iam.Effect.ALLOW,
       actions: [
         "cognito-sync:*",
-        "cognito-identity:*"
+        "cognito-identity:*",
       ],
       resources: ["*"],
     }));
     authenticatedRole.addToPolicy(new iam.PolicyStatement({
       effect: iam.Effect.ALLOW,
       actions: [
-        "sts:GetFederationToken"
+        "sts:*"
       ],
       resources: ["*"],
     }));
@@ -137,27 +152,29 @@ export class CognitoAwsConsoleInfraStack extends cdk.Stack {
         "authenticated": authenticatedRole.roleArn,
         "unauthenticated": unauthenticatedRole.roleArn
       },
-      roleMappings: {
-        'cognito-aws-console': {
-          ambiguousRoleResolution: 'AuthenticatedRole',
-          identityProvider: `cognito-idp.${Stack.of(this).region}.amazonaws.com/${userPool.userPoolId}:${client.userPoolClientId}`,
-          type: 'Token'
-        }
-      }
+      // roleMappings: {
+      //   'cognito-aws-console': {
+      //     ambiguousRoleResolution: 'AuthenticatedRole',
+      //     identityProvider: `cognito-idp.${Stack.of(this).region}.amazonaws.com/${userPool.userPoolId}:${client.userPoolClientId}`,
+      //     type: 'Token'
+      //   }
+      // }
     });
 
     const conditions = {
       "StringEquals": {
-        "cognito-identity.amazonaws.com:aud": userPool.userPoolId
+        "cognito-identity.amazonaws.com:aud": identityPool.ref
       },
       "ForAnyValue:StringLike": {
         "cognito-identity.amazonaws.com:amr": "authenticated"
-      }
+      },
     };
 
     const roles = props.groups.map(group => {
-      const groupRole = new iam.Role(this, `${props.environment}-CognitoAwsConsolGroupRole-${group.name}`, {
-        assumedBy: new iam.WebIdentityPrincipal('cognito-identity.amazonaws.com', conditions)
+      const groupRole = new iam.Role(this, `${props.environment}-console-group-role-${group.name}`, {
+        assumedBy: new iam.WebIdentityPrincipal('cognito-identity.amazonaws.com', conditions),
+        roleName: `${props.environment}-console-group-role-${group.name}`,
+        maxSessionDuration: Duration.hours(12),
       });
       if (group.admin) {
         groupRole.addManagedPolicy(ManagedPolicy.fromManagedPolicyArn(this, 'AdminAccessPolicy', 'arn:aws:iam::aws:policy/AdministratorAccess'))
@@ -165,7 +182,7 @@ export class CognitoAwsConsoleInfraStack extends cdk.Stack {
       groupRole.addToPolicy(new iam.PolicyStatement({
         effect: iam.Effect.ALLOW,
         actions: [
-          "sts:GetFederationToken"
+          "sts:*"
         ],
         resources: ["*"],
       }));
