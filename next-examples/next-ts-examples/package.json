@@ -13,7 +13,7 @@
     "@types/node": "^14.14.33",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.2",
-    "cross-fetch": "latest",
+    "cross-fetch": "^3.1.0",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
@@ -22,7 +22,7 @@
     "@types/jest": "latest",
     "@typescript-eslint/eslint-plugin": "^4.17.0",
     "@typescript-eslint/parser": "^4.17.0",
-    "eslint": "latest",
+    "eslint": "^7.22.0",
     "eslint-config-airbnb-base": "latest",
     "eslint-config-airbnb-typescript": "latest",
     "eslint-config-import": "latest",
