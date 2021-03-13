@@ -28,7 +28,7 @@
     "@nuxtjs/eslint-module": "latest",
     "@nuxtjs/stylelint-module": "latest",
     "babel-eslint": "latest",
-    "eslint": "latest",
+    "eslint": "^7.22.0",
     "eslint-config-prettier": "latest",
     "eslint-plugin-nuxt": "latest",
     "eslint-plugin-prettier": "latest",
