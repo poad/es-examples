@@ -12,15 +12,15 @@
   "author": "poad",
   "license": "Apache-2.0",
   "dependencies": {
-    "dockerode": "^3.2.0",
-    "electron": "^11.2.0"
+    "dockerode": "latest",
+    "electron": "latest"
   },
   "devDependencies": {
-    "electron-builder": "^22.9.1",
-    "eslint": "^7.18.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "minimist": "^1.2.5",
-    "svjsl": "^1.9.4"
+    "electron-builder": "latest",
+    "eslint": "latest",
+    "eslint-config-airbnb-base": "latest",
+    "eslint-plugin-import": "latest",
+    "minimist": "latest",
+    "svjsl": "latest"
   }
 }
