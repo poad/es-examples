@@ -12,19 +12,19 @@
     "cdk": "cdk"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.93.0",
+    "@aws-cdk/assert": "latest",
     "@types/jest": "latest",
-    "@types/node": "^14.14.33",
-    "aws-cdk": "^1.93.0",
+    "@types/node": "latest",
+    "aws-cdk": "latest",
     "jest": "latest",
     "ts-jest": "latest",
     "ts-node": "latest",
     "typescript": "latest"
   },
   "dependencies": {
-    "@aws-cdk/aws-cognito": "^1.93.0",
-    "@aws-cdk/aws-iam": "^1.93.0",
-    "@aws-cdk/core": "^1.93.0",
+    "@aws-cdk/aws-cognito": "latest",
+    "@aws-cdk/aws-iam": "latest",
+    "@aws-cdk/core": "latest",
     "source-map-support": "latest"
   }
 }
