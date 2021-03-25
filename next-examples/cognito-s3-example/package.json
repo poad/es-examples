@@ -10,19 +10,19 @@
     "lint": "eslint --ext .ts,.js,.tsx,.jsx src"
   },
   "dependencies": {
-    "@aws-amplify/storage": "latest",
+    "@aws-amplify/storage": "^3.3.28",
     "@aws-amplify/ui-components": "latest",
     "@aws-amplify/ui-react": "latest",
     "@material-ui/core": "latest",
     "@material-ui/icons": "latest",
     "@types/node": "^14.14.35",
     "@types/react": "latest",
-    "amazon-cognito-identity-js": "latest",
-    "aws-amplify": "latest",
-    "aws-amplify-react": "latest",
+    "amazon-cognito-identity-js": "^4.6.0",
+    "aws-amplify": "^3.3.25",
+    "aws-amplify-react": "^4.2.29",
     "next": "^10.0.9",
-    "react": "latest",
-    "react-dom": "latest"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.18.0",
@@ -36,7 +36,7 @@
     "eslint-plugin-import": "latest",
     "eslint-plugin-jest": "^24.3.2",
     "eslint-plugin-jsx-a11y": "latest",
-    "eslint-plugin-react": "latest",
+    "eslint-plugin-react": "^7.23.1",
     "eslint-plugin-react-hooks": "latest",
     "jest": "latest",
     "next-compose-plugins": "latest",
