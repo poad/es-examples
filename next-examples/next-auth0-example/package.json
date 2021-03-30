@@ -16,11 +16,11 @@
     "@material-ui/icons": "latest",
     "@material-ui/styles": "latest",
     "@types/auth0": "^2.33.3",
-    "@types/node": "^14.14.35",
+    "@types/node": "^14.14.37",
     "@types/react": "latest",
     "@types/styled-jsx": "latest",
-    "cross-fetch": "^3.1.2",
-    "next": "^10.0.9",
+    "cross-fetch": "^3.1.3",
+    "next": "^10.1.2",
     "next-compose-plugins": "latest",
     "next-offline": "latest",
     "react": "^17.0.2",
@@ -30,8 +30,8 @@
     "@babel/core": "latest",
     "@rebass/preset-material": "latest",
     "@types/rebass": "latest",
-    "@typescript-eslint/eslint-plugin": "^4.18.0",
-    "@typescript-eslint/parser": "^4.18.0",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
     "babel-eslint": "latest",
     "eslint": "latest",
     "eslint-config-airbnb-base": "latest",
@@ -54,6 +54,6 @@
     "ts-jest": "^26.5.4",
     "typescript": "latest",
     "use-auth0": "latest",
-    "webpack": "^5.26.3"
+    "webpack": "^5.28.0"
   }
 }

@@ -10,18 +10,18 @@
     "lint": "eslint --ext .ts,.js,.tsx,.jsx src"
   },
   "dependencies": {
-    "@types/node": "^14.14.35",
+    "@types/node": "^14.14.37",
     "@types/react": "latest",
     "@types/react-dom": "^17.0.3",
     "cross-fetch": "^3.1.2",
-    "next": "^10.0.9",
+    "next": "^10.1.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.21",
-    "@typescript-eslint/eslint-plugin": "^4.18.0",
-    "@typescript-eslint/parser": "^4.18.0",
+    "@types/jest": "^26.0.22",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
     "eslint": "latest",
     "eslint-config-airbnb-base": "latest",
     "eslint-config-airbnb-typescript": "latest",
