@@ -13,7 +13,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "dockerode": "latest",
-    "electron": "^12.0.2"
+    "electron": "latest"
   },
   "devDependencies": {
     "electron-builder": "latest",

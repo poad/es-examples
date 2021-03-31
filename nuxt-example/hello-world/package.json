@@ -11,14 +11,6 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore src"
   },
-  "lint-staged": {
-    "src/*.{js,vue}": "eslint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "dependencies": {
     "@nuxtjs/axios": "latest",
     "nuxt": "^2.15.3"
@@ -28,12 +20,10 @@
     "@nuxtjs/eslint-module": "latest",
     "@nuxtjs/stylelint-module": "latest",
     "babel-eslint": "latest",
-    "eslint": "^7.22.0",
+    "eslint": "^7.23.0",
     "eslint-config-prettier": "latest",
     "eslint-plugin-nuxt": "latest",
     "eslint-plugin-prettier": "latest",
-    "husky": "^5.2.0",
-    "lint-staged": "latest",
     "prettier": "latest",
     "stylelint": "latest"
   }
