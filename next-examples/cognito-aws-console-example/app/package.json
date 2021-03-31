@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@aws-amplify/core": "^3.8.21",
-    "@aws-amplify/ui-components": "latest",
-    "@aws-amplify/ui-react": "latest",
+    "@aws-amplify/ui-components": "^1.1.1",
+    "@aws-amplify/ui-react": "^1.0.6",
     "@aws-sdk/client-cognito-identity-provider": "^3.9.1",
     "@aws-sdk/client-sts": "^3.9.1",
     "@material-ui/core": "latest",
@@ -28,12 +28,12 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@swc/cli": "latest",
-    "@swc/core": "latest",
+    "@swc/cli": "^0.1.36",
+    "@swc/core": "^1.2.51",
     "@typescript-eslint/eslint-plugin": "^4.20.0",
     "@typescript-eslint/parser": "^4.20.0",
     "copy-webpack-plugin": "^8.1.0",
-    "eslint": "latest",
+    "eslint": "^7.23.0",
     "eslint-config-import": "latest",
     "eslint-config-standard": "latest",
     "eslint-import-resolver-typescript": "latest",
@@ -52,7 +52,7 @@
     "ts-jest": "^26.5.4",
     "typescript": "latest",
     "webpack": "^5.28.0",
-    "webpack-cli": "latest",
+    "webpack-cli": "^4.6.0",
     "webpack-dev-server": "latest"
   }
 }
