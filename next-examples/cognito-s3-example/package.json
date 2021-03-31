@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@aws-amplify/storage": "^3.3.29",
-    "@aws-amplify/ui-components": "latest",
-    "@aws-amplify/ui-react": "latest",
+    "@aws-amplify/ui-components": "^1.1.1",
+    "@aws-amplify/ui-react": "^1.0.6",
     "@material-ui/core": "latest",
     "@material-ui/icons": "latest",
     "@types/node": "^14.14.37",
@@ -27,7 +27,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.20.0",
     "@typescript-eslint/parser": "^4.20.0",
-    "eslint": "latest",
+    "eslint": "^7.23.0",
     "eslint-config-airbnb-base": "latest",
     "eslint-config-airbnb-typescript": "latest",
     "eslint-config-import": "latest",
