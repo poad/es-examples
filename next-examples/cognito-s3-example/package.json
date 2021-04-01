@@ -40,7 +40,7 @@
     "eslint-plugin-react-hooks": "latest",
     "jest": "latest",
     "next-compose-plugins": "latest",
-    "next-transpile-modules": "latest",
+    "next-transpile-modules": "^6.4.0",
     "ts-jest": "^26.5.4",
     "typescript": "latest"
   }
