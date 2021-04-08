@@ -52,7 +52,7 @@
     "react-use-auth": "latest",
     "rebass": "latest",
     "ts-jest": "^26.5.4",
-    "typescript": "latest",
+    "typescript": "^4.2.4",
     "use-auth0": "latest",
     "webpack": "^5.28.0"
   }
