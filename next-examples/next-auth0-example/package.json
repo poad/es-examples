@@ -22,7 +22,7 @@
     "cross-fetch": "^3.1.3",
     "next": "^10.1.2",
     "next-compose-plugins": "latest",
-    "next-offline": "latest",
+    "next-offline": "^5.0.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -37,7 +37,7 @@
     "eslint-config-airbnb-base": "latest",
     "eslint-config-airbnb-typescript": "latest",
     "eslint-config-import": "latest",
-    "eslint-config-prettier": "latest",
+    "eslint-config-prettier": "^8.2.0",
     "eslint-import-resolver-typescript": "latest",
     "eslint-plugin-flowtype": "^5.4.0",
     "eslint-plugin-import": "latest",
