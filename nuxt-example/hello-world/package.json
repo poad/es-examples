@@ -23,7 +23,7 @@
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.2.0",
     "eslint-plugin-nuxt": "latest",
-    "eslint-plugin-prettier": "latest",
+    "eslint-plugin-prettier": "^3.4.0",
     "prettier": "latest",
     "stylelint": "latest"
   }
