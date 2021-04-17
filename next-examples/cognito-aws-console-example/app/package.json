@@ -48,7 +48,7 @@
     "jsonwebtoken": "latest",
     "next-compose-plugins": "latest",
     "next-transpile-modules": "^6.4.0",
-    "swc-loader": "latest",
+    "swc-loader": "^0.1.13",
     "ts-jest": "^26.5.4",
     "typescript": "^4.2.4",
     "webpack": "^5.28.0",
