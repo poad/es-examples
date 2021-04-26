@@ -4055,9 +4055,9 @@ for-in@^1.0.2:
   integrity sha1-gQaNKVqBQuwKxybG4iAMMPttXoA=
 
 fork-ts-checker-webpack-plugin@^6.1.1:
-  version "6.2.4"
-  resolved "https://registry.yarnpkg.com/fork-ts-checker-webpack-plugin/-/fork-ts-checker-webpack-plugin-6.2.4.tgz#f46dc0700820476f260451518b9d545c42277aff"
-  integrity sha512-M0+lELATBqzf+tubq9PcRfJm4/wW172P7cAoCs1OpgfRICtEuJ/JUMuUm0H9JAZ57lLaN1gj38uxNktDhscYhA==
+  version "6.2.5"
+  resolved "https://registry.yarnpkg.com/fork-ts-checker-webpack-plugin/-/fork-ts-checker-webpack-plugin-6.2.5.tgz#09e81ad57ed862c9dd093298550e7f6966ab1a2f"
+  integrity sha512-EqHkTmxOotb5WJEc8kjzJh8IRuRUpHxtBh+jGyOHJcEwwZzqTmlMNAJsVF3tvALohi9yJzV8C1j215DyK8Ta8w==
   dependencies:
     "@babel/code-frame" "^7.8.3"
     "@types/json-schema" "^7.0.5"
@@ -5633,9 +5633,9 @@ node-fetch@^2.6.1:
   integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
 
 node-html-parser@^3.1.2:
-  version "3.1.6"
-  resolved "https://registry.yarnpkg.com/node-html-parser/-/node-html-parser-3.1.6.tgz#b29581e374adefc0c8a4c14b7f21f16aa83b7df6"
-  integrity sha512-E4tXYV/gjGqowVhTKrqz0hvVGRjurANIQK5vI7djr7PdrWYKNXBBQJMV586NwBNVeERou1fGPyC+FWXBcSauyw==
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/node-html-parser/-/node-html-parser-3.2.0.tgz#2b1b81297bc6387a868b227761b35e553d5bf92c"
+  integrity sha512-fXhiFFnccwoUW92VvDACbtg1Kv7Ky0Qj9Rv7ETWpczSFLW07JWM6zQ+d523kiHNpodQHlvDhtjK2T86AclzXzQ==
   dependencies:
     css-select "^3.1.2"
     he "1.2.0"
