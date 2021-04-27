@@ -16,7 +16,7 @@
     "@material-ui/core": "latest",
     "@material-ui/icons": "latest",
     "@types/node": "^14.14.37",
-    "@types/react": "latest",
+    "@types/react": "^17.0.4",
     "amazon-cognito-identity-js": "^4.6.0",
     "aws-amplify": "^3.3.26",
     "aws-amplify-react": "^4.2.30",
