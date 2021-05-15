@@ -28,7 +28,7 @@
     "eslint-config-import": "latest",
     "eslint-import-resolver-typescript": "latest",
     "eslint-plugin-flowtype": "^5.4.0",
-    "eslint-plugin-import": "latest",
+    "eslint-plugin-import": "^2.23.0",
     "eslint-plugin-jest": "^24.3.2",
     "eslint-plugin-jsx-a11y": "latest",
     "eslint-plugin-react": "^7.23.1",
