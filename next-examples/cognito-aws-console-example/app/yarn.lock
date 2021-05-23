@@ -2557,9 +2557,9 @@
   integrity sha512-+iTbntw2IZPb/anVDbypzfQa+ay64MW0Zo8aJ8gZPWMMK6/OubMVb6lUPMagqjOPnmtauXnFCACVl3O7ogjeqQ==
 
 "@swc/cli@^0.1.36":
-  version "0.1.40"
-  resolved "https://registry.yarnpkg.com/@swc/cli/-/cli-0.1.40.tgz#46cbe13d9771cdc7a33b67ce9c00f97509e4e9af"
-  integrity sha512-lChdXr6qU+wBsHsS+Z8MP/HTNuRTgor5j90OqaY6hCKoQGHoxvbbq0sj5NfaP9fVr4hzqQnJtFJsZbzinrxHDg==
+  version "0.1.41"
+  resolved "https://registry.yarnpkg.com/@swc/cli/-/cli-0.1.41.tgz#c8f82d2e75f043db1430ae8fabd2dda89ec433b5"
+  integrity sha512-JNG+dCIIMWmB6QuNgR7Daj3qkCFsYbWy5zePGoOR9NAZO9YHciU3/VqLghgxhhzLwETXMJsIhB4SC0ZYIk+MUQ==
   dependencies:
     commander "^7.1.0"
     convert-source-map "^1.6.0"
@@ -8926,9 +8926,9 @@ spdx-expression-parse@^3.0.0:
     spdx-license-ids "^3.0.0"
 
 spdx-license-ids@^3.0.0:
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-3.0.8.tgz#eb1e97ad99b11bf3f82a3b71a0472dd9a00f2ecf"
-  integrity sha512-NDgA96EnaLSvtbM7trJj+t1LUR3pirkDCcz9nOUlPb5DMBGsH7oES6C3hs3j7R9oHEa1EMvReS/BUAIT5Tcr0g==
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-3.0.9.tgz#8a595135def9592bda69709474f1cbeea7c2467f"
+  integrity sha512-Ki212dKK4ogX+xDo4CtOZBVIwhsKBEfsEEcwmJfLQzirgc2jIWdzg40Unxz/HzEUqM1WFzVlQSMF9kZZ2HboLQ==
 
 spdy-transport@^3.0.0:
   version "3.0.0"
@@ -9418,9 +9418,9 @@ tr46@^1.0.1:
     punycode "^2.1.0"
 
 tr46@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/tr46/-/tr46-2.0.2.tgz#03273586def1595ae08fedb38d7733cee91d2479"
-  integrity sha512-3n1qG+/5kg+jrbTzwAykB5yRYtQCTqOGKq5U5PE3b0a1/mzo6snDhjGS0zJVJunO0NrT3Dg1MLy5TjWP/UJppg==
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/tr46/-/tr46-2.1.0.tgz#fa87aa81ca5d5941da8cbf1f9b749dc969a4e240"
+  integrity sha512-15Ih7phfcdP5YxqiB+iDtLoaTz4Nd35+IiAv0kQ5FNKHzXgdWqPoTIqEDDJmXceQt4JZk6lVPT8lnDlPpGDppw==
   dependencies:
     punycode "^2.1.1"
 
