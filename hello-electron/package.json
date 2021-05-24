@@ -21,11 +21,11 @@
   "homepage": "https://github.com/poad/es-examples#readme",
   "devDependencies": {
     "electron-builder": "latest",
-    "eslint": "latest",
+    "eslint": "^7.27.0",
     "eslint-config-airbnb-base": "latest",
-    "eslint-plugin-import": "latest"
+    "eslint-plugin-import": "^2.23.3"
   },
   "dependencies": {
-    "electron": "latest"
+    "electron": "^12.0.9"
   }
 }
