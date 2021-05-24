@@ -35,7 +35,7 @@
     "copy-webpack-plugin": "^8.1.0",
     "eslint": "^7.23.0",
     "eslint-config-import": "latest",
-    "eslint-config-standard": "latest",
+    "eslint-config-standard": "^16.0.3",
     "eslint-import-resolver-typescript": "latest",
     "eslint-plugin-flowtype": "^5.4.0",
     "eslint-plugin-jest": "^24.3.2",
