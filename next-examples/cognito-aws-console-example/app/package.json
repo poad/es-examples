@@ -44,7 +44,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "latest",
-    "jest": "latest",
+    "jest": "^27.0.1",
     "jsonwebtoken": "latest",
     "next-compose-plugins": "latest",
     "next-transpile-modules": "^7.2.0",

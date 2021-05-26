@@ -46,7 +46,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "latest",
-    "jest": "latest",
+    "jest": "^27.0.1",
     "json": "^11.0.0",
     "prettier": "^2.3.0",
     "react-use-auth": "latest",
