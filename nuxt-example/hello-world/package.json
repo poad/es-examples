@@ -16,7 +16,7 @@
     "nuxt": "^2.15.6"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "latest",
+    "@nuxtjs/eslint-config": "^6.0.1",
     "@nuxtjs/eslint-module": "latest",
     "@nuxtjs/stylelint-module": "latest",
     "babel-eslint": "latest",
