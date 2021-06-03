@@ -43,9 +43,7 @@
             <em><small>&mdash; John Leider</small></em>
           </div>
           <hr class="my-3" />
-          <a href="https://nuxtjs.org/" target="_blank">
-            Nuxt Documentation
-          </a>
+          <a href="https://nuxtjs.org/" target="_blank"> Nuxt Documentation </a>
           <br />
           <a href="https://github.com/nuxt/nuxt.js" target="_blank">
             Nuxt GitHub
@@ -54,8 +52,8 @@
         <v-card-actions>
           <v-spacer />
           <v-btn color="primary" nuxt to="/inspire">
-            Continue
-          </v-btn>
+Continue
+</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
@@ -63,10 +61,10 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from 'vue-property-decorator'
+import { Vue, Component } from 'vue-property-decorator';
 
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import Logo from '~/components/Logo.vue';
+import VuetifyLogo from '~/components/VuetifyLogo.vue';
 
 @Component({
   components: {
