@@ -43,9 +43,7 @@
             <em><small>&mdash; John Leider</small></em>
           </div>
           <hr class="my-3" />
-          <a href="https://nuxtjs.org/" target="_blank">
-            Nuxt Documentation
-          </a>
+          <a href="https://nuxtjs.org/" target="_blank"> Nuxt Documentation </a>
           <br />
           <a href="https://github.com/nuxt/nuxt.js" target="_blank">
             Nuxt GitHub
@@ -53,9 +51,7 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer />
-          <v-btn color="primary" nuxt to="/inspire">
-            Continue
-          </v-btn>
+          <v-btn color="primary" nuxt to="/inspire"> Continue </v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
@@ -65,7 +61,14 @@
         <v-card-text v-show="!!message">{{ message }}</v-card-text>
         <v-card-actions class="pt-0">
           <v-spacer></v-spacer>
-          <v-btn @click.native="close" color="primary"  column justify-center align-center>close</v-btn>
+          <v-btn
+            color="primary"
+            column
+            justify-center
+            align-center
+            @click.native="close"
+            >close</v-btn
+          >
           <v-spacer></v-spacer>
         </v-card-actions>
       </v-card>
@@ -78,6 +81,10 @@ import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
 export default {
+  components: {
+    Logo,
+    VuetifyLogo
+  },
   data: () => ({
     dialog: false,
     resolve: null,
@@ -90,14 +97,12 @@ export default {
       zIndex: 200
     }
   }),
-  components: {
-    Logo,
-    VuetifyLogo
-  },
   async mounted() {
     if (await this.open('Delete', 'Are you sure?', { color: 'red' })) {
+      // eslint-disable-next-line no-console
       console.log('--yes')
     } else {
+      // eslint-disable-next-line no-console
       console.log('--no')
     }
   },
