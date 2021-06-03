@@ -10,6 +10,8 @@ jobs:
 
     strategy:
       matrix:
+        # node-version: [12.x, 14.x, 16.x]
+        node-version: [14.x]
         targets:
           - path: dockerode-example
             test: false
@@ -35,29 +37,17 @@ jobs:
           - path: next-examples/next-ts-examples
             test: true
             lint: true
-          # - path: nuxt-example/hello-world
-          #   test: true
-          #   lint: false
-          # - path: nuxt-example/nuxt-ts-spa-example
-          #   test: true
-          #   lint: false
-          # - path: nuxt-example/nuxt-typescript-example
-          #   test: true
-          #   lint: false
-          # - path: nuxt-example/nuxt-vuetify-example
-          #   test: true
-          #   lint: false
           - path: elm-electron
             test: true
             lint: false
 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: Use Node.js 14.x
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: 14.x
+          node-version: ${{ matrix.node-version }}
 
       - name: Build and lint
         env:

@@ -9,11 +9,7 @@ YARN_PROJECTS="\
   next-examples/next-auth0-example\
   next-examples/next-ts-examples\
   next-examples/cognito-aws-console-example/app\
-  next-examples/cognito-aws-console-example/infra\
-  nuxt-example/hello-world\
-  nuxt-example/nuxt-ts-spa-example\
-  nuxt-example/nuxt-typescript-example\
-  nuxt-example/nuxt-vuetify-example
+  next-examples/cognito-aws-console-example/infra
 "
 
 which jq >> /dev/null
