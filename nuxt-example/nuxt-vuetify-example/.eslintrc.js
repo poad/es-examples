@@ -1,23 +1,23 @@
 module.exports = {
   root: true,
   env: {
-    browser: true,
-    node: true
+    es6: true,
+    node: true,
   },
+  parser: "@typescript-eslint/parser",
   parserOptions: {
-    parser: 'babel-eslint'
+    sourceType: "module",
+    ecmaVersion: 2019, // Node.js 12の場合は2019、他のバージョンのNode.jsを利用している場合は場合は適宜変更する
+    tsconfigRootDir: __dirname,
+    project: ["./tsconfig.eslint.json"],
   },
+  plugins: ["@typescript-eslint"],
   extends: [
-    '@nuxtjs',
-    'prettier',
-    'prettier/vue',
-    'plugin:prettier/recommended',
-    'plugin:nuxt/recommended'
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier",
+    "prettier/@typescript-eslint",
   ],
-  plugins: [
-    'prettier'
-  ],
-  // add your custom rules here
-  rules: {
-  }
-}
+  rules: {},
+};

@@ -7,26 +7,26 @@
       {{ otherError }}
     </h1>
     <NuxtLink to="/">
-      Home page
-    </NuxtLink>
+Home page
+</NuxtLink>
   </v-app>
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop, Emit } from 'vue-property-decorator'
+import { Vue, Component, Prop, Emit } from 'vue-property-decorator';
 
 export interface Error {
-  statusCode: number
+  statusCode: number;
 }
 
 @Component({
-  layout: 'empty'
+  layout: 'empty',
 })
 export default class NuxtTypeScriptExampleErrorLayout extends Vue {
-  @Prop({ type: Object, required: true }) readonly error!: Error
+  @Prop({ type: Object, required: true }) readonly error!: Error;
 
-  pageNotFound: string = '404 Not Found'
-  otherError: string = 'An error occurred'
+  pageNotFound: string = '404 Not Found';
+  otherError: string = 'An error occurred';
 
   @Emit()
   head() {

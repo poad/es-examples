@@ -26,18 +26,18 @@
     </v-navigation-drawer>
     <v-app-bar :clipped-left="clipped" fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn @click.stop="miniVariant = !miniVariant" icon>
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
+      <v-btn icon @click.stop="miniVariant = !miniVariant">
+        <v-icon>mdi-{{ `chevron-${miniVariant ? "right" : "left"}` }}</v-icon>
       </v-btn>
-      <v-btn @click.stop="clipped = !clipped" icon>
+      <v-btn icon @click.stop="clipped = !clipped">
         <v-icon>mdi-application</v-icon>
       </v-btn>
-      <v-btn @click.stop="fixed = !fixed" icon>
+      <v-btn icon @click.stop="fixed = !fixed">
         <v-icon>mdi-minus</v-icon>
       </v-btn>
       <v-toolbar-title v-text="title" />
       <v-spacer />
-      <v-btn @click.stop="rightDrawer = !rightDrawer" icon>
+      <v-btn icon @click.stop="rightDrawer = !rightDrawer">
         <v-icon>mdi-menu</v-icon>
       </v-btn>
     </v-app-bar>
@@ -50,9 +50,7 @@
       <v-list>
         <v-list-item @click.native="right = !right">
           <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
-            </v-icon>
+            <v-icon light> mdi-repeat </v-icon>
           </v-list-item-action>
           <v-list-item-title>Switch drawer (click me)</v-list-item-title>
         </v-list-item>
@@ -65,30 +63,30 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from 'vue-property-decorator'
+import { Vue, Component } from "vue-property-decorator";
 
 export interface Item {
-  icon: string
-  title: string
-  to: string
+  icon: string;
+  title: string;
+  to: string;
 }
 
 @Component
 export default class NuxtTypeScriptExampleDefaultLayout extends Vue {
-  clipped: Boolean = false
-  drawer: Boolean = false
-  fixed: Boolean = false
+  clipped: Boolean = false;
+  drawer: Boolean = false;
+  fixed: Boolean = false;
   items: Array<Item> = [
     {
       icon: 'mdi-apps',
       title: 'Welcome',
-      to: '/'
-    }
-  ]
+      to: '/',
+    },
+  ];
 
-  miniVariant: Boolean = false
-  right: Boolean = true
-  rightDrawer: Boolean = false
-  title: string = 'Vuetify.js'
+  miniVariant: Boolean = false;
+  right: Boolean = true;
+  rightDrawer: Boolean = false;
+  title: string = 'Vuetify.js';
 }
 </script>

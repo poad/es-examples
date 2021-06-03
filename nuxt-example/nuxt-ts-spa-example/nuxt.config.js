@@ -71,7 +71,7 @@ export default {
     }
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js', '.css', '.html' ],
+    extensions: ['.tsx', '.ts', '.js', '.css', '.html'],
   },
   srcDir: 'src',
   /*
