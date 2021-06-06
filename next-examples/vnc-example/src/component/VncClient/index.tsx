@@ -4,8 +4,7 @@ import { VncScreen } from 'react-vnc';
 interface VncClientProps {
   container?: Element,
   url: string
-};
-
+}
 
 const VncClient: React.FunctionComponent<VncClientProps> = (props): JSX.Element => {
   const [url] = useState(props.url);
@@ -21,6 +20,6 @@ const VncClient: React.FunctionComponent<VncClientProps> = (props): JSX.Element 
       }}
     />
   ) : (<div>VNC URL not provided.</div>);
-}
+};
 
 export default VncClient;
