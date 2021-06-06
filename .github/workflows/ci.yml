@@ -37,6 +37,9 @@ jobs:
           - path: next-examples/next-ts-examples
             test: true
             lint: true
+          - path: next-examples/vnc-example
+            test: true
+            lint: true
           - path: elm-electron
             test: true
             lint: false

@@ -9,7 +9,8 @@ YARN_PROJECTS="\
   next-examples/next-auth0-example\
   next-examples/next-ts-examples\
   next-examples/cognito-aws-console-example/app\
-  next-examples/cognito-aws-console-example/infra
+  next-examples/cognito-aws-console-example/infra\
+  next-examples/vnc-example\
 "
 
 which jq >> /dev/null
