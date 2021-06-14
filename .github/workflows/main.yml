@@ -7,6 +7,13 @@ on:
   schedule:
     - cron:  '0 0 * * *'
 
+  # Try enabling auto-merge for the specified pull request or all open pull requests if none is specified.
+  workflow_dispatch:
+    inputs:
+      pull-request:
+        description: Pull Request Number
+        required: false
+
 jobs:
   auto_update:
     runs-on: ubuntu-latest
@@ -72,7 +79,7 @@ jobs:
       uses: reitermarkus/automerge@v1.5.2
       with:
         token: ${{ secrets.PERSONAL_TOKEN_FOR_GITHUB_ACTIONS }}
-        merge-method: rebase
+        merge-method: squash
         pull-request: ${{ github.event.inputs.pull-request }}
 
   
