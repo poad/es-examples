@@ -13,9 +13,9 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "electron-builder": "latest",
-    "elm-review": "^2.5.2",
+    "elm-review": "^2.5.3",
     "svjsl": "latest",
-    "webpack": "^5.39.0",
+    "webpack": "^5.39.1",
     "webpack-cli": "^4.7.2"
   },
   "dependencies": {
