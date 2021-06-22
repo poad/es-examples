@@ -58,5 +58,5 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/static/sw.js"
-  ]
+, "src/pages/_document.tsx_"  ]
 }

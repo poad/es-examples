@@ -65,7 +65,7 @@ interface LayoutProps {
   container?: Element;
 }
 
-export const Layout: React.FC<LayoutProps> = (props) => {
+export const Layout = (props: React.PropsWithChildren<LayoutProps>): JSX.Element => {
   const { container } = props;
   const classes = useStyles();
   const theme = useTheme();

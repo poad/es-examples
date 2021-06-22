@@ -41,7 +41,7 @@ const Home = (): JSX.Element => {
   const [list, setList] = useState<ListObjectItem[]>([]);
   useEffect(() => {
     if (user === undefined) {
-      Promise.all([Auth.currentAuthenticatedUser().then(u => setUser(u))]);
+      Promise.all([Auth.currentAuthenticatedUser().then((u) => setUser(u))]);
     }
 
     Promise.all([Storage.list('contents')
