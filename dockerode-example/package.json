@@ -13,12 +13,12 @@
   "license": "Apache-2.0",
   "dependencies": {
     "dockerode": "^3.3.0",
-    "electron": "^13.1.0",
-    "electron-builder": "^22.11.5"
+    "electron": "^13.1.4",
+    "electron-builder": "^22.11.7"
   },
   "devDependencies": {
-    "eslint": "^7.27.0",
+    "eslint": "^7.29.0",
     "eslint-config-airbnb-base": "latest",
-    "eslint-plugin-import": "latest"
+    "eslint-plugin-import": "^2.23.4"
   }
 }
