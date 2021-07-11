@@ -661,17 +661,17 @@
     fastq "^1.6.0"
 
 "@reach/portal@^0.15.0":
-  version "0.15.2"
-  resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.15.2.tgz#fe7aa3d9a475ec07686c39bab3a0d85093fa91fb"
-  integrity sha512-5x+dchGr4btRnLazwmyCYbSPVJAIrw0eXwhz7Vj9uT/EIp43WzOtTcODdLOoH6Ol2QLjX1Yt/fBjdK9+UAKxSA==
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.15.3.tgz#56fe4f6575ff07fc7d1a151481713171c7e37c88"
+  integrity sha512-9VkVEQIF9gK73uK1f9MYhrJivd0dpxhkBEb2zwVCIEGvKVxadmRNmCjgcWexGjA0UeCjIhEjQQehs/IZHNLPdw==
   dependencies:
-    "@reach/utils" "0.15.2"
+    "@reach/utils" "0.15.3"
     tslib "^2.3.0"
 
-"@reach/utils@0.15.2":
-  version "0.15.2"
-  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.15.2.tgz#a63a761eb36266bf33d65cb91520dd85a04ae116"
-  integrity sha512-Lr1SJ5X4hEjD/M0TAonURM8wytM/JuPSuIP7t+e5cil34pThyLsBvTGeNfmpSgaLJ5vlsv0x9u6g4SRAEr84Og==
+"@reach/utils@0.15.3":
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.15.3.tgz#200f42adba9d1463b1c6a75ee2aaf9f0cba84f9d"
+  integrity sha512-HFyjw8LZ4/RRk5bcMpDAeEc3aOeLR/vWRDsljlE3cHI5GfFlZcG3DDLSW8C2ba74RCFp/4X3Nz0nOrd4JdkZ1w==
   dependencies:
     tiny-warning "^1.0.3"
     tslib "^2.3.0"
@@ -1206,12 +1206,12 @@ atob@^2.1.2:
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
 autoprefixer@^10.2.6:
-  version "10.2.6"
-  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-10.2.6.tgz#aadd9ec34e1c98d403e01950038049f0eb252949"
-  integrity sha512-8lChSmdU6dCNMCQopIf4Pe5kipkAGj/fvTMslCsih0uHpOrXOPUEVOmYMMqmw3cekQkSD7EhIeuYl5y0BLdKqg==
+  version "10.3.0"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-10.3.0.tgz#c60803dce9268f7fe0a5e5c1fe48a74356d7b864"
+  integrity sha512-BzVzdjs47nT3MphTddr8eSsPVEIUCF96X6iC8V5iEB8RtxrU+ybtdhHV5rsqRqOsoyh/acQaYs7YupHPUECgmg==
   dependencies:
     browserslist "^4.16.6"
-    caniuse-lite "^1.0.30001230"
+    caniuse-lite "^1.0.30001243"
     colorette "^1.2.2"
     fraction.js "^4.1.1"
     normalize-range "^0.1.2"
@@ -1504,7 +1504,7 @@ camelcase@^6.2.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-6.2.0.tgz#924af881c9d525ac9d87f40d964e5cea982a1809"
   integrity sha512-c7wVvbw3f37nuobQNtgsgG9POC9qMbNuMQmTCqZv23b6MIz0fcYpBiOlv9gEN/hdLdnZTDQhg6e9Dq5M1vKvfg==
 
-caniuse-lite@^1.0.30001202, caniuse-lite@^1.0.30001219, caniuse-lite@^1.0.30001228, caniuse-lite@^1.0.30001230:
+caniuse-lite@^1.0.30001202, caniuse-lite@^1.0.30001219, caniuse-lite@^1.0.30001228, caniuse-lite@^1.0.30001243:
   version "1.0.30001243"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001243.tgz#d9250155c91e872186671c523f3ae50cfc94a3aa"
   integrity sha512-vNxw9mkTBtkmLFnJRv/2rhs1yufpDfCkBZexG3Y0xdOH2Z/eE/85E4Dl5j1YUN34nZVsSp6vVRFQRrez9wJMRA==
@@ -5832,9 +5832,9 @@ write-file-atomic@^3.0.0:
     typedarray-to-buffer "^3.1.5"
 
 ws@^7.4.5:
-  version "7.5.2"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-7.5.2.tgz#09cc8fea3bec1bc5ed44ef51b42f945be36900f6"
-  integrity sha512-lkF7AWRicoB9mAgjeKbGqVUekLnSNO4VjKVnuPHpQeOxZOErX6BPXwJk70nFslRCEEA8EVW7ZjKwXaP9N+1sKQ==
+  version "7.5.3"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-7.5.3.tgz#160835b63c7d97bfab418fc1b8a9fced2ac01a74"
+  integrity sha512-kQ/dHIzuLrS6Je9+uv81ueZomEwH0qVYstcAQ4/Z93K8zeko9gtAbttJWzoC5ukqXY1PpoouV3+VSOqEAFt5wg==
 
 xml-name-validator@^3.0.0:
   version "3.0.0"
