@@ -22,18 +22,18 @@ interface Auth0Param {
 }
 
 const auth0Config: Auth0Config = {
-  domain: process.env.AUTH0_DOMAIN as string,
-  clientId: process.env.AUTH0_CLIENT_ID as string,
-  callbackUrl: process.env.CALLBACK_URL as string,
+  domain: process.env.NEXT_PUBLIC_AUTH0_DOMAIN as string,
+  clientId: process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID as string,
+  callbackUrl: process.env.NEXT_PUBLIC_CALLBACK_URL as string,
 };
 
 const auth0Param: Auth0Param = {
-  domain: process.env.AUTH0_DOMAIN as string,
-  clientId: process.env.AUTH0_CLIENT_ID as string,
-  redirectUri: process.env.CALLBACK_URL as string,
+  domain: process.env.NEXT_PUBLIC_AUTH0_DOMAIN as string,
+  clientId: process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID as string,
+  redirectUri: process.env.NEXT_PUBLIC_CALLBACK_URL as string,
 };
 
-const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
+const App = ({ Component, pageProps }: AppProps): JSX.Element => {
   useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
@@ -65,4 +65,4 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   );
 };
 
-export default MyApp;
+export default App;
