@@ -1,5 +1,5 @@
 {
-  "presets": ["next/babel"],
+  "presets": ["next/babel", "linaria/babel"],
   "env": {
     "test": {
       "presets": [

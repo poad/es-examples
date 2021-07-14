@@ -145,7 +145,7 @@ const Home = (): JSX.Element => {
           {
             signInToken !== undefined ? (
               // eslint-disable-next-line max-len
-              <Link href={`https://signin.aws.amazon.com/federation?Action=login&Destination=${encodeURIComponent('https://console.aws.amazon.com/')}&SigninToken=${signInToken}`} target='_blank'>AWS Managed Console</Link>
+              <Link href={`https://signin.aws.amazon.com/federation?Action=login&Destination=${encodeURIComponent(`https://${awsconfig.Auth.region}.console.aws.amazon.com/console/home?region=${awsconfig.Auth.region}#`)}&SigninToken=${signInToken}`} target='_blank'>AWS Managed Console</Link>
             ) : (
               ''
             )

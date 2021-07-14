@@ -23,11 +23,15 @@
     "@types/react": "^17.0.11",
     "@types/react-dom": "^17.0.8",
     "aws-amplify": "^4.1.1",
+    "linaria": "^2.1.0",
     "next": "^11.0.1",
+    "next-linaria": "^0.11.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
     "@swc/cli": "^0.1.46",
     "@swc/core": "^1.2.61",
     "@typescript-eslint/eslint-plugin": "^4.28.0",
