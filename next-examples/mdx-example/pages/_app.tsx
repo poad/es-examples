@@ -4,7 +4,9 @@ import '../styles/globals.css'
 
 const App = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
-    <Layout children={(<Component {...pageProps} />)} />
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
 }
 export default App;
