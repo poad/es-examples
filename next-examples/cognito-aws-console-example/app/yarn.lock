@@ -64,7 +64,7 @@
   dependencies:
     "@aws-amplify/core" "4.1.3"
 
-"@aws-amplify/core@4.1.3", "@aws-amplify/core@^4.1.1":
+"@aws-amplify/core@4.1.3", "@aws-amplify/core@^4.1.3":
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/@aws-amplify/core/-/core-4.1.3.tgz#10d1d42d2ee2c4dc2ec921e8e3917898e236403f"
   integrity sha512-Je7Qgcc4xx5RLVPzJbsehSWn0N7xRqBLNTpOeMbEFOUnhdUTxgUlMX48xkI8css/ooiq0u/H4HFRXRMVtXlHIQ==
@@ -145,7 +145,7 @@
     events "^3.1.0"
     sinon "^7.5.0"
 
-"@aws-amplify/ui-components@1.6.1", "@aws-amplify/ui-components@^1.5.0":
+"@aws-amplify/ui-components@1.6.1", "@aws-amplify/ui-components@^1.6.1":
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/@aws-amplify/ui-components/-/ui-components-1.6.1.tgz#154daf13079505deea273c48430698aee5d191d7"
   integrity sha512-CD3fmSCqBeJJJe00JMsIe4Q5+ULMn6eRdfQc17i8tdFw5X4K3cTD8D9Lz8QZhfA77lB31j0BoFiV0WWddfX6xw==
@@ -153,7 +153,7 @@
     qrcode "^1.4.4"
     uuid "^8.2.0"
 
-"@aws-amplify/ui-react@^1.2.3":
+"@aws-amplify/ui-react@^1.2.5":
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/@aws-amplify/ui-react/-/ui-react-1.2.5.tgz#997a3eec741351196bff186d244a21efc9f8c59d"
   integrity sha512-DUpJ6GHmQALiP2K9X7a2fUVjgeAnv78NM4644fCZ9cpbH/V8zYXSwpAWa6p7TLmLHJdZRILKVxLs1qOCXTsoxg==
@@ -255,7 +255,7 @@
   dependencies:
     tslib "^1.8.0"
 
-"@aws-sdk/client-cognito-identity-provider@^3.18.0":
+"@aws-sdk/client-cognito-identity-provider@^3.21.0":
   version "3.21.0"
   resolved "https://registry.yarnpkg.com/@aws-sdk/client-cognito-identity-provider/-/client-cognito-identity-provider-3.21.0.tgz#5caf3be16e134bd437f806c53f7cd307b7c389bb"
   integrity sha512-6PYTjkEL+jg2Jwk12T7B3sqVxr6Fsa4rBv9EuRKAJQ3ENmOCxH4JUP8753iydyyhMYxUtgtng0WyVxXw2XowDw==
@@ -717,7 +717,7 @@
     "@aws-sdk/util-utf8-node" "3.20.0"
     tslib "^2.0.0"
 
-"@aws-sdk/client-sts@3.21.0", "@aws-sdk/client-sts@^3.18.0":
+"@aws-sdk/client-sts@3.21.0", "@aws-sdk/client-sts@^3.21.0":
   version "3.21.0"
   resolved "https://registry.yarnpkg.com/@aws-sdk/client-sts/-/client-sts-3.21.0.tgz#add20a9371fe102a2851112fc72b90aaa5566653"
   integrity sha512-TIYe1qcMrY+a33LTWUNmMNbc2Aiip7Sefynec+CfgGMmXrclDzocE2HqY1izkRN9MUEsFzeowPIpQnWw+CLK1Q==
@@ -2999,7 +2999,7 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@material-ui/core@^4.11.4":
+"@material-ui/core@^4.12.1":
   version "4.12.1"
   resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.12.1.tgz#ac8f081498047aa02bb6ee70b77c5dad6a2a6e73"
   integrity sha512-C6hYsjkWCTfBx9FaqxhCZCITBagh7fyCKFtHyvO3tTOcBw6NJaktdhNZ2n82jQdQdgfFvg6OOxi7OOzsAdAcBQ==
@@ -3367,22 +3367,17 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.8.tgz#edf1bf1dbf4e04413ca8e5b17b3b7d7d54b59818"
   integrity sha512-YSBPTLTVm2e2OoQIDYx8HaeWJ5tTToLH67kXR7zYNGupXMEHa2++G8k+DczX2cFVgalypqtyZIcU19AFcmOpmg==
 
-"@types/jsonwebtoken@^8.5.2":
+"@types/jsonwebtoken@^8.5.4":
   version "8.5.4"
   resolved "https://registry.yarnpkg.com/@types/jsonwebtoken/-/jsonwebtoken-8.5.4.tgz#50ccaf0aa6f5d7b9956e70fe323b76e582991913"
   integrity sha512-4L8msWK31oXwdtC81RmRBAULd0ShnAHjBuKT9MRQpjP0piNrZdXyTRcKY9/UIfhGeKIT4PvF5amOOUbbT/9Wpg==
   dependencies:
     "@types/node" "*"
 
-"@types/node@*":
+"@types/node@*", "@types/node@^16.3.2":
   version "16.3.2"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.3.2.tgz#655432817f83b51ac869c2d51dd8305fb8342e16"
   integrity sha512-jJs9ErFLP403I+hMLGnqDRWT0RYKSvArxuBVh2veudHV7ifEC1WAmjJADacZ7mRbA2nWgHtn8xyECMAot0SkAw==
-
-"@types/node@^15.12.4":
-  version "15.14.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.14.2.tgz#7af8ab20156586f076f4760bc1b3c5ddfffd1ff2"
-  integrity sha512-dvMUE/m2LbXPwlvVuzCyslTEtQ2ZwuuFClDrOQ6mp2CenCg971719PTILZ4I6bTP27xfFFc+o7x2TkLuun/MPw==
 
 "@types/prettier@^2.1.5":
   version "2.3.2"
@@ -3394,7 +3389,7 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
   integrity sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==
 
-"@types/react-dom@^17.0.8":
+"@types/react-dom@^17.0.9":
   version "17.0.9"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.9.tgz#441a981da9d7be117042e1a6fd3dac4b30f55add"
   integrity sha512-wIvGxLfgpVDSAMH5utdL9Ngm5Owu0VsGmldro3ORLXV8CShrL8awVj06NuEXFQ5xyaYfdca7Sgbk/50Ri1GdPg==
@@ -3408,7 +3403,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^17.0.11":
+"@types/react@*", "@types/react@^17.0.14":
   version "17.0.14"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.14.tgz#f0629761ca02945c4e8fea99b8177f4c5c61fb0f"
   integrity sha512-0WwKHUbWuQWOce61UexYuWTGuGY/8JvtUe/dtQ6lR4sZ3UiylHotJeWpf3ArP9+DSGUoLY3wbU59VyMrJps5VQ==
@@ -3439,7 +3434,7 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/eslint-plugin@^4.28.0":
+"@typescript-eslint/eslint-plugin@^4.28.3":
   version "4.28.3"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-4.28.3.tgz#36cdcd9ca6f9e5cb49b9f61b970b1976708d084b"
   integrity sha512-jW8sEFu1ZeaV8xzwsfi6Vgtty2jf7/lJmQmDkDruBjYAbx5DA8JtbcMnP0rNPUG+oH5GoQBTSp+9613BzuIpYg==
@@ -3464,7 +3459,7 @@
     eslint-scope "^5.1.1"
     eslint-utils "^3.0.0"
 
-"@typescript-eslint/parser@^4.20.0", "@typescript-eslint/parser@^4.28.0":
+"@typescript-eslint/parser@^4.20.0", "@typescript-eslint/parser@^4.28.3":
   version "4.28.3"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-4.28.3.tgz#95f1d475c08268edffdcb2779993c488b6434b44"
   integrity sha512-ZyWEn34bJexn/JNYvLQab0Mo5e+qqQNhknxmc8azgNd4XqspVYR5oHq9O11fLwdZMRcj4by15ghSlIEq+H5ltQ==
@@ -3924,7 +3919,7 @@ available-typed-arrays@^1.0.2:
   resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.4.tgz#9e0ae84ecff20caae6a94a1c3bc39b955649b7a9"
   integrity sha512-SA5mXJWrId1TaQjfxUYghbqQ/hYioKmLJvPJyDuYRtXXenFNMjj4hSSt1Cf1xsuXSXrtxrVC5Ot4eU6cOtBDdA==
 
-aws-amplify@^4.1.1:
+aws-amplify@^4.1.3:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/aws-amplify/-/aws-amplify-4.1.3.tgz#01d9cf65be1114b1cedee51f93cec18d03929210"
   integrity sha512-HQsnASdwhO4jINXdFWhNxdWFAIPmmNjyFKNWeJ4JPeknzfaHUMVHW5yMCOHgzTIy6LPeYissWS5FG0E10JUAhw==
@@ -5173,7 +5168,7 @@ eslint-plugin-es@^3.0.0:
     eslint-utils "^2.0.0"
     regexpp "^3.0.0"
 
-eslint-plugin-flowtype@^5.7.2:
+eslint-plugin-flowtype@^5.8.0:
   version "5.8.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-5.8.0.tgz#35b55e4ce559b90efbe913ed33630e391e301481"
   integrity sha512-feK1xnUTsMSNTOw9jFw7aVgZl7Ep+ghpta/YEoaV6jbXU6Yso30B7BIj9ObHLzZ5TFJL7D98az080wfykLCrcw==
@@ -5298,7 +5293,7 @@ eslint-visitor-keys@^2.0.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-2.1.0.tgz#f65328259305927392c938ed44eb0a5c9b2bd303"
   integrity sha512-0rSmRBzXgDzIsD6mGdJgevzgezI534Cer5L/vyMX0kHzT/jiB43jRhd9YUlMGYLQy2zprNmoT8qasCGtY+QaKw==
 
-eslint@^7.29.0:
+eslint@^7.30.0:
   version "7.30.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.30.0.tgz#6d34ab51aaa56112fd97166226c9a97f505474f8"
   integrity sha512-VLqz80i3as3NdloY44BQSJpFw534L9Oh+6zJOUaViV4JPd+DaHwutqP7tcpkW3YiXbK6s05RZl7yl7cQn+lijg==
@@ -6787,7 +6782,7 @@ jest-worker@^27.0.2, jest-worker@^27.0.6:
     merge-stream "^2.0.0"
     supports-color "^8.0.0"
 
-jest@^27.0.5:
+jest@^27.0.6:
   version "27.0.6"
   resolved "https://registry.yarnpkg.com/jest/-/jest-27.0.6.tgz#10517b2a628f0409087fbf473db44777d7a04505"
   integrity sha512-EjV8aETrsD0wHl7CKMibKwQNQc3gIRBXlTikBmmHUeVMKaPFxdcUIBfoDqTSXDoGJIivAYGqCWVlzCSaVjPQsA==
@@ -9256,7 +9251,7 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript@^4.3.4:
+typescript@^4.3.5:
   version "4.3.5"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.3.5.tgz#4d1c37cc16e893973c45a06886b7113234f119f4"
   integrity sha512-DqQgihaQ9cUrskJo9kIyW/+g0Vxsk8cDtZ52a3NGh0YNTfpUSArXSohyUGnvbPazEPLu398C0UxmKSOrPumUzA==
@@ -9544,7 +9539,7 @@ webpack-sources@^2.3.0:
     source-list-map "^2.0.1"
     source-map "^0.6.1"
 
-webpack@^5.40.0:
+webpack@^5.44.0:
   version "5.44.0"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.44.0.tgz#97b13a02bd79fb71ac6301ce697920660fa214a1"
   integrity sha512-I1S1w4QLoKmH19pX6YhYN0NiSXaWY8Ou00oA+aMcr9IUGeF5azns+IKBkfoAAG9Bu5zOIzZt/mN35OffBya8AQ==
