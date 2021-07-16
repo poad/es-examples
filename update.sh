@@ -7,6 +7,7 @@ YARN_PROJECTS="\
   next-examples/cognito-s3-example\
   next-examples/cognito-s3-example/infra\
   next-examples/next-auth0-example\
+  next-examples/mdx-example\
   next-examples/next-ts-examples\
   next-examples/cognito-aws-console-example/app\
   next-examples/cognito-aws-console-example/infra\
